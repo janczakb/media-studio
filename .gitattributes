@@ -1,0 +1,79 @@
+# Repository material is not part of a Composer dist archive.
+* text=auto eol=lf
+*.webp binary
+*.png binary
+*.jpg binary
+*.woff2 binary
+
+/art export-ignore
+/docs export-ignore
+/.internal export-ignore
+/.github export-ignore
+/tests export-ignore
+/examples export-ignore
+/example export-ignore
+/dumps export-ignore
+/scripts export-ignore
+/snippets export-ignore
+/node_modules export-ignore
+/vendor export-ignore
+/.ai export-ignore
+/.agents export-ignore
+/.codex export-ignore
+/.claude export-ignore
+/.cursor export-ignore
+/.phpunit.cache export-ignore
+/.phpunit.result.cache export-ignore
+/test-results export-ignore
+/playwright-report export-ignore
+/coverage export-ignore
+/.env* export-ignore
+/auth.json export-ignore
+/AGENTS.md export-ignore
+/CLAUDE.md export-ignore
+/CONTRIBUTING.md export-ignore
+/SUPPORT.md export-ignore
+/SECURITY.md export-ignore
+/.gitignore export-ignore
+/.gitattributes export-ignore
+/.editorconfig export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
+/composer.lock export-ignore
+/phpunit.xml export-ignore
+/phpunit.xml.dist export-ignore
+/phpstan.neon export-ignore
+/pint.json export-ignore
+
+# Companion applications and frontend compilation inputs are separate artifacts.
+/packages/browser-extension export-ignore
+/packages/cli export-ignore
+/packages/cloudflare-worker export-ignore
+/packages/react/node_modules export-ignore
+/packages/react/src export-ignore
+/packages/react/styles export-ignore
+/packages/react/build.mjs export-ignore
+/packages/react/tsconfig.json export-ignore
+# Keep runtime src/config/database/lang/resources and built distributions.
+# In particular, resources/boost belongs in the installed Laravel package.
+
+# Repository policies and local tooling do not execute in consumers' applications.
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/AGENTS.md export-ignore
+/CLAUDE.md export-ignore
+/CONTRIBUTING.md export-ignore
+/SUPPORT.md export-ignore
+/SECURITY.md export-ignore
+/CODE_OF_CONDUCT.md export-ignore
+/CHANGELOG.md export-ignore
+/.editorconfig export-ignore
+/.env* export-ignore
+/.phpunit.cache export-ignore
+/.phpunit.result.cache export-ignore
+/test-results export-ignore
+/playwright-report export-ignore
+/composer.lock export-ignore
+/package.json export-ignore
+/package-lock.json export-ignore
+/tsconfig.json export-ignore

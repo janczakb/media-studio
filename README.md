@@ -18,6 +18,8 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/janczakb/media-studio/actions/workflows/repository-checks.yml"><img src="https://github.com/janczakb/media-studio/actions/workflows/repository-checks.yml/badge.svg" alt="Repository checks"></a>
+  <a href="https://github.com/sponsors/janczakb"><img src="https://img.shields.io/badge/GitHub-Sponsors-EA4AAA?style=flat-square&amp;logo=githubsponsors&amp;logoColor=white" alt="Sponsor Media Studio development"></a>
   <a href="https://github.com/janczakb/media-studio/stargazers"><img src="https://img.shields.io/github/stars/janczakb/media-studio.svg?style=flat-square&amp;color=EAB308&amp;label=GitHub%20stars" alt="GitHub stars"></a>
   <img src="https://img.shields.io/badge/PHP-8.3%2B-777BB4?style=flat-square" alt="PHP 8.3 or later">
   <img src="https://img.shields.io/badge/Laravel-12%20%7C%2013-FF2D20?style=flat-square" alt="Laravel 12 and 13">
@@ -334,5 +336,11 @@ Choose how your team captures, organizes and reuses files. Keep the library conn
 **[Explore the documentation](https://studio.bjanczak.com/)** · **[Filament components](https://studio.bjanczak.com/filament)** · **[AI capabilities](https://studio.bjanczak.com/ai)** · **[Browser extension](https://studio.bjanczak.com/browser-extension)**
 
 If Studio fits your workflow, [star the repository](https://github.com/janczakb/media-studio/stargazers) to help other Laravel and Filament developers discover it.
+
+## Support the FLEX family
+
+Help sustain the development of Media Studio and the FLEX ecosystem through **[GitHub Sponsors](https://github.com/sponsors/janczakb)** or **[Buy Me a Coffee](https://buymeacoffee.com/janczakb)**.
+
+[Report an issue](https://github.com/janczakb/media-studio/issues) · [Discussions](https://github.com/janczakb/media-studio/discussions) · [Support](SUPPORT.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
 
 © 2026 Bartłomiej Janczak.

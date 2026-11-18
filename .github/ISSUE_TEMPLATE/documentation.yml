@@ -1,0 +1,17 @@
+name: Documentation improvement
+description: Report a missing example, unclear guide or incorrect description.
+labels: [documentation]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL or README section
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: What needs to change?
+      description: Include the configuration or use case the documentation should explain.
+    validations:
+      required: true

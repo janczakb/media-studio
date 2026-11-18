@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation and integration examples
+    url: https://studio.bjanczak.com/
+    about: Start with setup, configuration and examples for your integration.
+  - name: Report a security vulnerability privately
+    url: https://github.com/janczakb/media-studio/security/advisories/new
+    about: Send security reports through private vulnerability reporting.
+  - name: Sponsor development
+    url: https://github.com/sponsors/janczakb
+    about: Support ongoing work on the FLEX family.
