@@ -11,7 +11,7 @@
 </defs>
 <style>
   use { transform-box:fill-box; transform-origin:center; }
-  
+
   .pointer { animation:pointer 5.4s cubic-bezier(.45,0,.22,1) infinite; }
   .highlight { animation:pointer 5.4s cubic-bezier(.45,0,.22,1) infinite; }
   .preview-first { animation: first 5.4s steps(1,end) infinite; }

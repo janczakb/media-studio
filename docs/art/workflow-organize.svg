@@ -11,7 +11,7 @@
 </defs>
 <style>
   use { transform-box:fill-box; transform-origin:center; }
-  
+
   .sort { animation:sort 5s cubic-bezier(.5,0,.24,1) infinite; animation-delay:var(--delay); }
   @keyframes sort { 0%,15%,100% {transform:none} 38%,80% {transform:translate(var(--x),var(--y))} }
 

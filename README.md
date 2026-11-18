@@ -298,7 +298,18 @@ The in-app assistant, external MCP access and Boost's development skill serve di
 
 ## Getting started
 
-**Start with the [installation guide](https://studio.bjanczak.com/installation)** and the distribution available to your application. This public overview repository does not contain the Composer package, React build, CLI archive or browser-extension builds.
+**Start with the [installation guide](https://studio.bjanczak.com/installation).** The source-available Composer package includes the Laravel integration, Media Core and matching prebuilt browser assets. No Node.js build is required to install it.
+
+```bash
+composer config repositories.media-studio vcs https://github.com/janczakb/media-studio
+composer require useflex/media-studio:^0.1.0
+php artisan vendor:publish --tag=media-studio-config
+php artisan vendor:publish --tag=media-studio-migrations
+php artisan vendor:publish --tag=media-studio-assets --force
+php artisan migrate
+```
+
+Configure your private disk and authenticatable principal before using Studio. Development and noncommercial personal use are free; [purchase a commercial license](https://shop.bjanczak.com/checkout/buy/b087c01b-c85e-415a-af05-90690053c7d3) before business production.
 
 The Laravel package declares **PHP 8.3+** and **Laravel 12 or 13**. The interface uses **React 19**. **Spatie Laravel Permission 8** is a core dependency. **Filament 5, FLEX Fields, Spatie Media Library, AI services, search and MCP** are optional integrations with their own dependencies and setup.
 

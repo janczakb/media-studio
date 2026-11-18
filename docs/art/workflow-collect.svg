@@ -11,7 +11,7 @@
 </defs>
 <style>
   use { transform-box:fill-box; transform-origin:center; }
-  
+
   .stream { opacity:.32; animation:collect 4.6s cubic-bezier(.45,0,.21,1) infinite; animation-delay:var(--delay); }
   .dock { transform-origin:132px 132px; animation:receive 4.6s ease-in-out infinite; }
   @keyframes collect {

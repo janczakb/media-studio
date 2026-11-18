@@ -11,7 +11,7 @@
 </defs>
 <style>
   use { transform-box:fill-box; transform-origin:center; }
-  
+
   .dim { animation:dim 4.8s ease-in-out infinite; }
   .matched,.filter { animation:select 4.8s ease-in-out infinite; }
   .filter { transform-origin:132px 42px; }
