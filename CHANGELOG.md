@@ -1,26 +1,12 @@
 # Changelog
 
-Changes to the public Media Studio presentation and repository tooling are recorded here. Package release notes will be added with an actual software distribution.
+## 0.1.0 — 2026-11-18
 
-## Unreleased
+First source-available Composer distribution of FLEX Media Studio.
 
-### Product presentation
+- Laravel media workspace with optional Filament and FLEX Fields integrations.
+- Media Core and matching prebuilt browser assets included in one installation.
+- Asset publishing, optional standalone accounts, and Laravel Boost resources.
+- Personal noncommercial use and commercial Single Project, Unlimited and Business licenses.
 
-- Embedded rounded transparent corners into README WebP imagery and motion frames; removed the repository-checks badge from the product header.
-
-- Added feature cards captured from the documentation homepage and five animated extension demonstrations with static motion alternatives.
-- Reorganized technical catalogs and PHP examples into expandable sections.
-
-- Introduced the Media Studio overview with the approved product artwork, feature catalog and Filament examples.
-- Added links to the documentation at https://studio.bjanczak.com/.
-- Added presentation credits and community guidance.
-
-### Repository tooling
-
-- Added GitHub Sponsors and Buy Me a Coffee funding links.
-- Added bug-report, feature-request and documentation issue forms.
-- Added repository checks, CodeQL, dependency review and scheduled Actions updates.
-- Added distribution exclusions that preserve runtime source and Laravel Boost resources.
-- Added publication-boundary checks for private engineering folders.
-
-No installable package release has been published from this repository. The `VERSION` value is a development identifier, not a release tag or availability claim.
+See the documentation for supported integrations, optional dependencies and operational requirements. This release does not certify a particular library size or deployment performance.

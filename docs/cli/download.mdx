@@ -1,0 +1,26 @@
+---
+title: "Download a file or pinned version"
+description: "Save authorized original bytes locally while preserving existing destination files."
+---
+
+Supply an asset entry ULID and a destination filename. The parent directory must exist.
+
+```bash
+mkdir -p ./exports
+flex-studio download 01J9GQ4ZPS9Z91FMY3JC5M8HJY ./exports/oak.jpg \
+  --workspace 01J9GQ4ZPS9Z91FMY3JC5M8HJX
+```
+
+The CLI prepares the download through `studio_prepare_file_download`, streams bytes into a private temporary file beside the output, and publishes the destination after the transfer succeeds. An existing destination is preserved. Choose a new filename to download another copy.
+
+## Pin a version
+
+```bash
+flex-studio download 01J9GQ4ZPS9Z91FMY3JC5M8HJY ./exports/oak-reviewed.jpg \
+  --workspace 01J9GQ4ZPS9Z91FMY3JC5M8HJX \
+  --version 01J9GQ4ZPS9Z91FMY3JC5M8HJZ --json
+```
+
+The optional `--version` selects a specific available version. Omitting it prepares the current version. With `--json`, success prints one object containing `id` and the resolved local `output` path.
+
+A version removed by retention or a file unavailable to the credential owner cannot be downloaded. Verify free space and local write permission if streaming works but publication fails. The final publication uses a hard link within the destination filesystem, so the filesystem must support it.

@@ -1,0 +1,5 @@
+Brand artwork downloaded from the respective owners. See sources.json for source URLs, archive members and checksums.
+
+Brand names and marks remain the property of their respective owners and are used to identify integrations. Their upstream licensing and brand guidelines apply. These assets are not covered by a blanket LobeHub or Devicon license.
+
+connections.svg is original decorative artwork for FLEX Media Studio.

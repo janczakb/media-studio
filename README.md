@@ -61,6 +61,19 @@
 
 Use Studio as a media workspace, embed its React interface in your application, or connect it to **Filament**. FLEX Fields is an optional integration; the library and native Filament components work independently of it.
 
+## Free personally. Licensed commercially.
+
+Use Media Studio free for **personal, noncommercial projects, education and evaluation**. Commercial production—including internal business tools—requires a license.
+
+| Single Project | Unlimited | Business |
+| --- | --- | --- |
+| **$99 one time** | **$299 one time** | **$999 one time** |
+| One commercial application | Unlimited own and client projects | Unlimited + 12 months of priority product support |
+
+All plans include every feature, **12 months of updates** and **perpetual use of covered versions**. Prices are USD before applicable tax. Hosting, storage and third-party AI services are separate.
+
+**[Buy a commercial license](https://shop.bjanczak.com/checkout/buy/b087c01b-c85e-415a-af05-90690053c7d3)** · **[Compare plans](https://studio.bjanczak.com/licensing)** · **[License terms](LICENSE)**
+
 ## Find the file. Keep the momentum.
 
 Search names and tags, narrow by file type, or describe what you need with optional semantic search. Use the same search panel for your library workflow.
@@ -361,7 +374,7 @@ Folder navigation and large lists use paginated requests and virtualized views. 
 <details>
 <summary><strong>Where are the source code, downloads and license terms?</strong></summary>
 
-This repository currently publishes the product overview and presentation assets only. Follow the documentation for integration guidance. No package release, download availability or software-license grant is implied by this README.
+Use is governed by [LICENSE](LICENSE), with plan details in [COMMERCIAL.md](COMMERCIAL.md). [Buy a commercial license](https://shop.bjanczak.com/checkout/buy/b087c01b-c85e-415a-af05-90690053c7d3) for business production. Installation and release availability are described in the [installation guide](https://studio.bjanczak.com/installation).
 
 </details>
 

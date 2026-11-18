@@ -1,0 +1,65 @@
+---
+title: "CLI command reference"
+description: "All supported commands, options, defaults, output formats and environment variables."
+---
+
+Use `flex-studio --help` or `flex-studio <command> --help` to display the installed command syntax. The CLI currently provides import, search and download.
+
+## Environment
+
+| Variable | Value |
+| --- | --- |
+| `FLEX_STUDIO_URL` | Complete configured MCP endpoint |
+| `FLEX_STUDIO_TOKEN` | Managed MCP credential |
+
+Remote operations require both variables. Dry-run imports use local files only. [Connection guide](/cli/authentication)
+
+## Import
+
+```text
+flex-studio import <directory> --workspace <ULID>
+  [--parent <ULID>] [--manifest <jsonl> | --pattern <regexp>]
+  [--mode rebuild|keep] [--dry-run] [--concurrency <1-8>]
+  [--direct] [--json]
+```
+
+| Option | Default and purpose |
+| --- | --- |
+| `--workspace` | Required for a real import |
+| `--parent` | Optional destination base folder |
+| `--manifest` | JSONL manifest path, resolved from the current working directory |
+| `--pattern` | Anchored filename pattern with named key and variant captures |
+| `--mode` | `rebuild`, or `keep` to preserve variants |
+| `--dry-run` | Plan without network access or remote writes |
+| `--concurrency` | 2 groups, integer range 1–8 |
+| `--direct` | Prefer eligible S3 multipart for resumable source uploads |
+| `--json` | Emit one JSON record per group |
+| `--help`, `-h` | Display usage |
+
+`--manifest` and `--pattern` are mutually exclusive. [Import workflow](/cli/import) · [Manifest schema](/cli/manifests) · [Transfers](/cli/transfers)
+
+## Search
+
+```text
+flex-studio search <query> --workspace <ULID> [--cursor <cursor>] [--json]
+```
+
+The query is one positional argument. Quote text containing spaces. A call returns one page. The cursor is an opaque value from the previous response. [Search and pagination](/cli/search)
+
+## Download
+
+```text
+flex-studio download <entry> <output-file> --workspace <ULID>
+  [--version <ULID>] [--json]
+```
+
+The entry and optional version are public ULIDs. The output is a local filename whose parent exists. Success prints the absolute output path or a JSON object. [Download workflow](/cli/download)
+
+## Process result
+
+| Result | Exit status |
+| --- | --- |
+| Help, completed dry run or successful command | 0 |
+| Invalid invocation, planning error, failed group or failed download | 1 |
+
+Read [Automation](/cli/automation) for stdout, stderr, completion order and partial failures.

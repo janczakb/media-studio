@@ -1,0 +1,60 @@
+---
+title: "Import images and conversions"
+description: "Group existing image files, preview the result and choose which variants to transfer."
+---
+
+[Install the CLI](/cli/installation) and [configure access](/cli/authentication) before uploading. Start with a local dry run to inspect the group and destination choices.
+
+```bash
+flex-studio import ./photos \
+  --pattern '^(?<key>.+)-(?<variant>original|[0-9]+)\.(?:jpg|avif)$' \
+  --mode rebuild --dry-run
+```
+
+A naming pattern groups matching images within each directory. Use the named captures `key` and `variant`. The name `original` marks the source explicitly. Non-matching files are skipped when a pattern is supplied. Without a pattern or manifest, each regular file is uploaded individually.
+
+## Rebuild conversions
+
+In `rebuild` mode the CLI sends one file per group. It selects the marked original or measures the candidates and picks the one with the largest resolution. Groups with conflicting aspect ratios or a tie for the largest resolution require an explicit original. Studio generates the conversions configured for the destination. See [image conversions](/image-conversions).
+
+## Keep conversions
+
+Use a manifest to preserve named conversions and assign display roles. Each line is one complete JSON object, with paths relative to the import directory.
+
+```jsonl
+{"id":"oak-chair","folder":"chairs","target":"oak.jpg","files":[{"path":"chairs/oak-original.jpg","original":true},{"path":"chairs/oak-400.avif","name":"card"},{"path":"chairs/oak-1900.avif","name":"detail"}],"roles":{"thumbnail":"card","preview":"detail"}}
+```
+
+```bash
+flex-studio import ./photos --manifest ./images.jsonl --mode keep --dry-run --json
+
+flex-studio import ./photos --manifest ./images.jsonl --mode keep \
+  --workspace 01J9GQ4ZPS9Z91FMY3JC5M8HJX
+```
+
+The source and its conversions are published together under one image version. The named conversions appear with the `import-` prefix. You can assign `thumbnail` and `preview` separately, including to intentionally different crops.
+
+Each preserved bundle supports one source and up to 12 conversions within the server's ordinary upload limit. Use rebuild mode for larger source files when you want resumable chunks or direct S3 Multipart. Repeat the same import with the same inputs after a failed transfer. Studio resolves the same folders and uses stable upload keys to avoid creating copies. The CLI reports failed groups and exits nonzero so a script can detect incomplete work.
+
+
+## Import an ordinary folder
+
+Without image grouping, every regular file is one source. The relative directories become folders beneath the optional destination parent.
+
+```bash
+flex-studio import ./campaign \
+  --workspace 01J9GQ4ZPS9Z91FMY3JC5M8HJX \
+  --parent 01J9GQ4ZPS9Z91FMY3JC5M8HJZ \
+  --concurrency 2 --json
+```
+
+Omit `--parent` to use the workspace root. Check the upload policy's allowed types and file-size limits. Keep the source stable until all groups finish.
+
+| Choose | What is transferred |
+| --- | --- |
+| Plain folder | Every nonempty regular file independently |
+| Pattern with rebuild | One selected original per matching image group |
+| Manifest with rebuild | One explicit or inferred source per record |
+| Manifest with keep | One source plus the record's named image conversions |
+
+See [Manifest format and limits](/cli/manifests), [resumable and S3 transfers](/cli/transfers) and [automation output](/cli/automation) for the corresponding contracts.

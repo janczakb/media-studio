@@ -1,0 +1,32 @@
+export type PhotoMedia = 'all' | 'image' | 'video' | 'starred';
+export type PhotoPeriod = 'years' | 'months' | 'days';
+export type PhotoAspect = 'square' | 'original';
+export type PhotosLabels = {
+    photos: string;
+    photoAll: string;
+    photosOnly: string;
+    videosOnly: string;
+    photoStarred: string;
+    photoYears: string;
+    photoMonths: string;
+    photoDays: string;
+    photoPeriod: string;
+    photoAspect: string;
+    photoSquare: string;
+    photoZoom: string;
+    zoomIn: string;
+    zoomOut: string;
+};
+export type PhotosToolbarProps = {
+    media: PhotoMedia;
+    onMediaChange: (media: PhotoMedia) => void;
+    period: PhotoPeriod;
+    onPeriodChange: (period: PhotoPeriod) => void;
+    aspect: PhotoAspect;
+    onAspectChange: (aspect: PhotoAspect) => void;
+    zoom: number;
+    onZoomChange: (zoom: number) => void;
+    portal: HTMLElement;
+    t: PhotosLabels;
+};
+export declare function PhotosToolbar({ media, onMediaChange, period, onPeriodChange, aspect, onAspectChange, zoom, onZoomChange, portal, t }: PhotosToolbarProps): import("react/jsx-runtime").JSX.Element;

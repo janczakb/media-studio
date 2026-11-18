@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 390">
+<title>Team review</title>
+<defs><radialGradient id="glow"><stop stop-color="#5669bb" stop-opacity=".27"/><stop offset="1" stop-color="#5669bb" stop-opacity="0"/></radialGradient></defs>
+<style>
+text{font-family:system-ui,sans-serif}
+.pulse{animation:pulse 4s ease-in-out infinite}
+.drift{animation:drift 4.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.63}50%{opacity:1}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){.pulse,.drift{animation:none}}
+</style>
+<ellipse cx="332" cy="245" rx="310" ry="172" fill="url(#glow)"/>
+<rect x="56" y="68" width="528" height="361" rx="17" fill="#1b202b" stroke="#444e65" /><path d="M56 113h528" fill="none" stroke="#323b50" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" /><circle cx="73" cy="91" r="2.5" fill="#e17579"/><circle cx="84" cy="91" r="2.5" fill="#edbd72"/><circle cx="95" cy="91" r="2.5" fill="#7ec49b"/><text x="115" y="96" fill="#d9e2f2" font-size="14" font-weight="500">Review</text><rect x="75" y="133" width="266" height="211" rx="12" fill="#262d49" stroke="none" /><circle cx="261.2" cy="196.3" r="27.43" fill="#9f98e9"/><path d="M80 335l82.46 -103.39 50.54 50.64 47.879999999999995 -31.65 74.48 84.4Z" fill="#6bd6eb" opacity=".74"/><rect x="354" y="127" width="207" height="223" rx="11" fill="#262c3b" stroke="none" /><text x="370" y="158" fill="#d9e2f2" font-size="17" font-weight="500">Comments</text><text x="371" y="195" fill="#d9e2f2" font-size="12" font-weight="500">Alex · 5 minutes ago</text><rect x="371" y="209" width="168" height="29" rx="8" fill="#374669" stroke="none" /><text x="381" y="228" fill="#d9e2f2" font-size="12" font-weight="500">Looks ready to ship</text><rect x="371" y="274" width="169" height="29" rx="8" fill="#374669" stroke="none" /><text x="381" y="293" fill="#d9e2f2" font-size="12" font-weight="500">Write a comment</text>
+</svg>

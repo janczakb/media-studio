@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 390">
+<title>Project folders</title>
+<defs><radialGradient id="glow"><stop stop-color="#5669bb" stop-opacity=".27"/><stop offset="1" stop-color="#5669bb" stop-opacity="0"/></radialGradient></defs>
+<style>
+text{font-family:system-ui,sans-serif}
+.pulse{animation:pulse 4s ease-in-out infinite}
+.drift{animation:drift 4.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.63}50%{opacity:1}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){.pulse,.drift{animation:none}}
+</style>
+<ellipse cx="332" cy="245" rx="310" ry="172" fill="url(#glow)"/>
+<rect x="70" y="38" width="500" height="360" rx="17" fill="#1b202b" stroke="#444e65" /><path d="M70 83h500" fill="none" stroke="#323b50" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" /><circle cx="87" cy="61" r="2.5" fill="#e17579"/><circle cx="98" cy="61" r="2.5" fill="#edbd72"/><circle cx="109" cy="61" r="2.5" fill="#7ec49b"/><text x="129" y="66" fill="#d9e2f2" font-size="14" font-weight="500">Projects</text><path d="M148 149H228" fill="none" stroke="#4d659c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M148 234H228" fill="none" stroke="#4d659c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M148 319H228" fill="none" stroke="#4d659c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M148 149v170" fill="none" stroke="#4d659c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M230 119v-4q0-7 7-7h29l12 11h37q9 0 9 9v47q0 9-9 9h-76q-9 0-9-9z" fill="#81abfc"/><path d="M232 128h89" fill="none" stroke="#dceaff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".53"/><text x="344" y="151" fill="#d9e2f2" font-size="18" font-weight="500">Brand assets</text><path d="M230 204v-4q0-7 7-7h29l12 11h37q9 0 9 9v47q0 9-9 9h-76q-9 0-9-9z" fill="#8a88ee"/><path d="M232 213h89" fill="none" stroke="#dceaff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".53"/><text x="344" y="236" fill="#d9e2f2" font-size="18" font-weight="500">Photography</text><path d="M230 289v-4q0-7 7-7h29l12 11h37q9 0 9 9v47q0 9-9 9h-76q-9 0-9-9z" fill="#77babd"/><path d="M232 298h89" fill="none" stroke="#dceaff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".53"/><text x="344" y="321" fill="#d9e2f2" font-size="18" font-weight="500">Exports</text>
+</svg>

@@ -1,0 +1,637 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "aspen",
+  "name": "FLEX Media Studio",
+  "description": "A media library for Laravel, Filament, AI clients and the command line.",
+  "colors": {
+    "primary": "#5B49D6",
+    "light": "#A89AFF",
+    "dark": "#4935B5"
+  },
+  "appearance": {
+    "default": "light",
+    "strict": true
+  },
+  "fonts": {
+    "family": "Inter",
+    "heading": {
+      "family": "Inter",
+      "weight": 600
+    }
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "index",
+              "installation",
+              "licensing",
+              "configuration",
+              "authentication",
+              "standalone-accounts",
+              "embedding",
+              "keyboard-shortcuts"
+            ]
+          },
+          {
+            "group": "Configuration reference",
+            "pages": [
+              "configuration-reference",
+              "configuration-core",
+              "configuration-processing",
+              "configuration-integrations"
+            ]
+          },
+          {
+            "group": "Languages and translations",
+            "pages": [
+              "localization",
+              "custom-translations",
+              "laravel-translations",
+              "rtl"
+            ]
+          },
+          {
+            "group": "Library and collaboration",
+            "pages": [
+              "workspaces",
+              "library-organization",
+              "photos",
+              "folder-navigation",
+              "filters-and-sorting",
+              "tags",
+              "custom-library-filters",
+              "notes",
+              "comments",
+              "sharing",
+              "publish-and-invite",
+              "share-analytics",
+              "guest-uploads",
+              "archive-downloads"
+            ]
+          },
+          {
+            "group": "Uploads",
+            "pages": [
+              "uploads",
+              "upload-resumable",
+              "upload-s3-multipart",
+              "upload-client-api",
+              "upload-recovery"
+            ]
+          },
+          {
+            "group": "Storage and delivery",
+            "pages": [
+              "storage-local",
+              "storage-s3",
+              "cdn-delivery",
+              "cdn-cloudfront",
+              "cdn-bunny",
+              "cdn-cloudflare-r2",
+              "existing-disk-sources",
+              "source-synchronization"
+            ]
+          },
+          {
+            "group": "File previews and processing",
+            "pages": [
+              "file-previews",
+              "image-annotations",
+              "image-preview-sdk",
+              "document-thumbnails",
+              "video-thumbnails",
+              "audio-previews",
+              "video-editing",
+              "image-conversions",
+              "image-rendition-presets",
+              "external-renditions",
+              "rendition-processing",
+              "processing-configuration",
+              "media-versions"
+            ]
+          },
+          {
+            "group": "Access and security",
+            "pages": [
+              "members",
+              "tenancy",
+              "workspace-preferences",
+              "encryption",
+              "encryption-s3",
+              "encryption-migration"
+            ]
+          },
+          {
+            "group": "Maintenance",
+            "pages": [
+              "operations",
+              "queues-and-scheduler",
+              "trash",
+              "workspace-retirement",
+              "notifications",
+              "cache",
+              "trash-notifications-and-cache"
+            ]
+          },
+          {
+            "group": "Search",
+            "pages": [
+              "search"
+            ]
+          },
+          {
+            "group": "Application integrations",
+            "pages": [
+              "application-files",
+              "application-files-models",
+              "application-files-access",
+              "application-files-thumbnails",
+              "media-references",
+              "spatie-media-library",
+              "slack"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "AI",
+        "icon": {
+          "name": "sparkles",
+          "library": "lucide"
+        },
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "ai/index",
+              "ai/setup",
+              "ai/providers",
+              "ai/configuration"
+            ]
+          },
+          {
+            "group": "Visual intelligence",
+            "pages": [
+              "ai-image-labels",
+              "ai-upload-integration",
+              "ai/video-analysis"
+            ]
+          },
+          {
+            "group": "Text and retrieval",
+            "pages": [
+              "search-content-indexing",
+              "ai/ocr",
+              "semantic-search"
+            ]
+          },
+          {
+            "group": "Assistant",
+            "pages": [
+              "assistant",
+              "ai/assistant-context",
+              "assistant-history",
+              "assistant-retention",
+              "characters"
+            ]
+          },
+          {
+            "group": "Integrations and operations",
+            "pages": [
+              "ai/image-editing",
+              "ai/operations"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Filament",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "filament",
+              "filament-setup",
+              "filament-configuration",
+              "filament-permissions",
+              "filament-tenancy"
+            ]
+          },
+          {
+            "group": "Form fields",
+            "pages": [
+              "filament-media-picker",
+              "filament-studio-file-upload",
+              "filament-picker-field",
+              "filament-upload-options",
+              "filament-media-references"
+            ]
+          },
+          {
+            "group": "Display components",
+            "pages": [
+              "filament-media-entry",
+              "filament-media-column"
+            ]
+          },
+          {
+            "group": "Editors",
+            "pages": [
+              "filament-editors",
+              "filament-rich-editor",
+              "filament-markdown-editor"
+            ]
+          },
+          {
+            "group": "Actions",
+            "pages": [
+              "filament-actions"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "FLEX Fields",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "flex-fields/index",
+              "flex-fields/setup"
+            ]
+          },
+          {
+            "group": "Components",
+            "pages": [
+              "filament-flex-file-upload",
+              "filament-flex-rich-editor"
+            ]
+          },
+          {
+            "group": "Configure and operate",
+            "pages": [
+              "flex-fields/configuration",
+              "flex-fields/image-editing",
+              "flex-fields/persistence",
+              "flex-fields/troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API & SDK",
+        "openapi": "/api/openapi.json",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "api/introduction",
+              "api/authentication",
+              "api/sdk",
+              "api/usage",
+              "image-preview-sdk"
+            ]
+          },
+          {
+            "group": "Workspace",
+            "pages": [
+              "GET /workspaces/{workspace}"
+            ]
+          },
+          {
+            "group": "Files",
+            "pages": [
+              "GET /workspaces/{workspace}/entries",
+              "GET /workspaces/{workspace}/entries/{entry}",
+              "GET /workspaces/{workspace}/entries/{entry}/content",
+              "GET /workspaces/{workspace}/entries/{entry}/preview",
+              "GET /workspaces/{workspace}/entries/{entry}/thumbnail",
+              "GET /workspaces/{workspace}/entries/{entry}/versions/{version}/content",
+              "GET /workspaces/{workspace}/entries/{entry}/versions/{version}/renditions/{preset}",
+              "PATCH /workspaces/{workspace}/entries/{entry}",
+              "POST /workspaces/{workspace}/entries/{entry}/trash",
+              "POST /workspaces/{workspace}/entries/{entry}/restore",
+              "POST /workspaces/{workspace}/entries/bulk"
+            ]
+          },
+          {
+            "group": "Tags",
+            "pages": [
+              "GET /workspaces/{workspace}/tags",
+              "PATCH /workspaces/{workspace}/entries/{entry}/tags"
+            ]
+          },
+          {
+            "group": "Search",
+            "pages": [
+              "GET /workspaces/{workspace}/search"
+            ]
+          },
+          {
+            "group": "Folders",
+            "pages": [
+              "POST /workspaces/{workspace}/folders",
+              "POST /workspaces/{workspace}/folders/resolve"
+            ]
+          },
+          {
+            "group": "Uploads",
+            "pages": [
+              "POST /workspaces/{workspace}/uploads",
+              "GET /workspaces/{workspace}/upload-policy",
+              "POST /workspaces/{workspace}/upload-sessions",
+              "GET /workspaces/{workspace}/upload-sessions/{session}",
+              "PUT /workspaces/{workspace}/upload-sessions/{session}/parts/{part}",
+              "POST /workspaces/{workspace}/upload-sessions/{session}/parts/{part}/sign",
+              "POST /workspaces/{workspace}/upload-sessions/{session}/parts/{part}/receipt",
+              "POST /workspaces/{workspace}/upload-sessions/{session}/complete",
+              "DELETE /workspaces/{workspace}/upload-sessions/{session}"
+            ]
+          },
+          {
+            "group": "Downloads",
+            "pages": [
+              "GET /workspaces/{workspace}/download",
+              "POST /workspaces/{workspace}/archive-jobs",
+              "GET /workspaces/{workspace}/archive-jobs/{job}",
+              "GET /workspaces/{workspace}/archive-jobs/{job}/result"
+            ]
+          },
+          {
+            "group": "Notes",
+            "pages": [
+              "GET /workspaces/{workspace}/notes/{entry}",
+              "POST /workspaces/{workspace}/notes",
+              "PATCH /workspaces/{workspace}/notes/{entry}"
+            ]
+          },
+          {
+            "group": "Comments",
+            "pages": [
+              "GET /workspaces/{workspace}/entries/{entry}/comments",
+              "POST /workspaces/{workspace}/entries/{entry}/comments",
+              "PATCH /workspaces/{workspace}/entries/{entry}/comments/{comment}"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "MCP",
+        "groups": [
+          {
+            "group": "Connect AI clients",
+            "pages": [
+              "mcp",
+              "mcp-access"
+            ]
+          },
+          {
+            "group": "Operate and troubleshoot",
+            "pages": [
+              "mcp-tools",
+              "mcp-transfers",
+              "mcp-troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Laravel Boost",
+        "icon": "code-xml",
+        "groups": [
+          {
+            "group": "AI-assisted development",
+            "pages": [
+              "boost/index",
+              "boost/setup",
+              "boost/workflows"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Browser Extension",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "browser-extension/index",
+              "browser-extension/install"
+            ]
+          },
+          {
+            "group": "Use the extension",
+            "pages": [
+              "browser-extension/capture",
+              "browser-extension/preferences",
+              "browser-extension/transfers"
+            ]
+          },
+          {
+            "group": "For developers",
+            "pages": [
+              "browser-extension/website-integration"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "CLI",
+        "groups": [
+          {
+            "group": "Get started",
+            "pages": [
+              "cli/index",
+              "cli/installation",
+              "cli/authentication"
+            ]
+          },
+          {
+            "group": "Import media",
+            "pages": [
+              "cli/import",
+              "cli/manifests",
+              "cli/transfers"
+            ]
+          },
+          {
+            "group": "Query and export",
+            "pages": [
+              "cli/search",
+              "cli/download"
+            ]
+          },
+          {
+            "group": "Automation and reference",
+            "pages": [
+              "cli/automation",
+              "cli/reference",
+              "cli/troubleshooting"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "FLEX family",
+        "icon": "blocks",
+        "groups": [
+          {
+            "group": "Our products",
+            "pages": [
+              "flex-family"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/art/media-studio.svg",
+    "dark": "/art/media-studio.svg",
+    "href": "/"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/janczakb",
+        "type": "link"
+      },
+      {
+        "label": "Buy a license",
+        "href": "https://shop.bjanczak.com/checkout/buy/b087c01b-c85e-415a-af05-90690053c7d3"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get started",
+      "href": "/installation"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/janczakb"
+    },
+    "links": [
+      {
+        "header": "Studio",
+        "items": [
+          {
+            "label": "Install",
+            "href": "/installation"
+          },
+          {
+            "label": "Configuration",
+            "href": "/configuration"
+          },
+          {
+            "label": "Workspaces",
+            "href": "/workspaces"
+          },
+          {
+            "label": "Deployment",
+            "href": "/operations"
+          },
+          {
+            "label": "Encryption",
+            "href": "/encryption"
+          },
+          {
+            "label": "Maintenance",
+            "href": "/trash-notifications-and-cache"
+          },
+          {
+            "label": "License & pricing",
+            "href": "/licensing"
+          },
+          {
+            "label": "Buy a license",
+            "href": "https://shop.bjanczak.com/checkout/buy/b087c01b-c85e-415a-af05-90690053c7d3"
+          }
+        ]
+      },
+      {
+        "header": "Features",
+        "items": [
+          {
+            "label": "Library",
+            "href": "/library-organization"
+          },
+          {
+            "label": "Search",
+            "href": "/search"
+          },
+          {
+            "label": "Sharing",
+            "href": "/sharing"
+          }
+        ]
+      },
+      {
+        "header": "FLEX & integrations",
+        "items": [
+          {
+            "label": "Browser Extension",
+            "href": "/browser-extension"
+          },
+          {
+            "label": "Filament",
+            "href": "/filament"
+          },
+          {
+            "label": "Slack",
+            "href": "/slack"
+          },
+          {
+            "label": "FLEX Fields",
+            "href": "https://flex-fields.bjanczak.com/"
+          },
+          {
+            "label": "FLEX Theme",
+            "href": "https://flex-theme.bjanczak.com/"
+          },
+          {
+            "label": "Media Studio",
+            "href": "/flex-family"
+          }
+        ]
+      },
+      {
+        "header": "Developers",
+        "items": [
+          {
+            "label": "REST API",
+            "href": "/api/introduction"
+          },
+          {
+            "label": "MCP",
+            "href": "/mcp"
+          },
+          {
+            "label": "CLI",
+            "href": "/cli"
+          }
+        ]
+      }
+    ]
+  },
+  "seo": {
+    "metatags": {
+      "canonical": "https://studio.bjanczak.com"
+    }
+  },
+  "favicon": "/art/folder-favicon.svg",
+  "integrations": {
+    "gtm": {
+      "tagId": "GTM-WNGDV23R"
+    }
+  }
+}

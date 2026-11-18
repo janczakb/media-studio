@@ -1,0 +1,31 @@
+import type { StudioNavigationItem } from './layout-config';
+export type NavigationSection = 'library' | 'workspaces';
+export declare const NavRail: import("react").NamedExoticComponent<{
+    unreadCount?: number;
+    items?: StudioNavigationItem[] | undefined;
+    section: NavigationSection;
+    onNavigate: (section: NavigationSection) => void;
+    view: string;
+    onView: (view: "shares" | "notifications" | "members" | "ai" | "integrations") => void;
+    onSettings: () => void;
+    canShare: boolean;
+    canMembers?: boolean;
+    canAi?: boolean;
+    canIntegrations?: boolean;
+    canSettings?: boolean;
+    canNotify: boolean;
+    logoUrl: string;
+    logoLabel: string;
+    labels: {
+        integrations: string;
+        ai: string;
+        primaryNavigation: string;
+        library: string;
+        workspaces: string;
+        shares: string;
+        notifications: string;
+        members: string;
+        settings: string;
+    };
+    portal: HTMLDivElement;
+}>;

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 286">
+<defs>
+  <linearGradient id="cyan" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#a9e8fa"/><stop offset="1" stop-color="#62b5eb"/></linearGradient>
+  <linearGradient id="violet" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#d7bafe"/><stop offset="1" stop-color="#9186ef"/></linearGradient>
+  <linearGradient id="rose" x2="1" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#ffd3ca"/><stop offset="1" stop-color="#f399a1"/></linearGradient>
+  <linearGradient id="tile" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#71bcff"/><stop offset="1" stop-color="#3869db"/></linearGradient>
+  <filter id="shadow" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#344d8a" flood-opacity=".2"/></filter>
+  <circle id="circle" r="20" fill="url(#cyan)"/>
+  <path id="triangle" d="M-4-16Q0-23 4-16L20 13Q23 18 17 18H-17Q-23 18-20 13Z" fill="url(#rose)"/>
+  <path id="hex" d="M-3-22Q0-24 3-22L18-13Q21-11 21-8V8Q21 11 18 13L3 22Q0 24-3 22L-18 13Q-21 11-21 8V-8Q-21-11-18-13Z" fill="url(#violet)"/>
+</defs>
+<style>
+  use { transform-box:fill-box; transform-origin:center; }
+  
+  .stream { opacity:.32; animation:collect 4.6s cubic-bezier(.45,0,.21,1) infinite; animation-delay:var(--delay); }
+  .dock { transform-origin:132px 132px; animation:receive 4.6s ease-in-out infinite; }
+  @keyframes collect {
+    0%, 100% { opacity:.32; transform:none; }
+    16% { opacity:1; transform:scale(1.04); }
+    36%, 53% { opacity:0; transform:translate(var(--x),var(--y)) scale(.36); }
+    77% { opacity:.32; transform:none; }
+  }
+  @keyframes receive { 38%, 56% {transform:scale(1.08)} 0%, 32%, 66%, 100% {transform:none} }
+
+  @media (prefers-reduced-motion:reduce) { * { animation:none!important; } }
+</style>
+<path d="M52 52L212 212M132 52V212M212 52L52 212M52 132H212" stroke="#aebbd9" stroke-dasharray="2 4" opacity=".57"/><g transform="translate(52 52)"><use href="#hex" class="stream" style="--x:80px;--y:80px;--delay:0.0s"/></g><g transform="translate(132 52)"><use href="#triangle" class="stream" style="--x:0px;--y:80px;--delay:0.23s"/></g><g transform="translate(212 52)"><use href="#circle" class="stream" style="--x:-80px;--y:80px;--delay:0.46s"/></g><g transform="translate(52 132)"><use href="#hex" class="stream" style="--x:80px;--y:0px;--delay:0.6900000000000001s"/></g><g transform="translate(212 132)"><use href="#circle" class="stream" style="--x:-80px;--y:0px;--delay:1.1500000000000001s"/></g><g transform="translate(52 212)"><use href="#circle" class="stream" style="--x:80px;--y:-80px;--delay:1.3800000000000001s"/></g><g transform="translate(132 212)"><use href="#triangle" class="stream" style="--x:0px;--y:-80px;--delay:1.61s"/></g><g transform="translate(212 212)"><use href="#hex" class="stream" style="--x:-80px;--y:-80px;--delay:1.84s"/></g>
+<g class="dock" filter="url(#shadow)">
+ <rect x="101" y="101" width="62" height="62" rx="17" fill="url(#tile)"/>
+ <path d="M116 126v-6q0-3 3-3h8l5 5h13q3 0 3 3v17q0 4-4 4h-24q-4 0-4-4z" fill="#ebf7ff"/>
+ <path d="M120 130h24" stroke="#98c5ff" stroke-width="2" stroke-linecap="round"/>
+</g>
+</svg>

@@ -1,0 +1,32 @@
+import { type ShortcutSettingsProps } from '../../shortcuts/ShortcutSettings';
+import type { BrowserPushControl } from '../management/useBrowserPush';
+import type { StudioTransport, WorkspaceSettings } from '../../contracts';
+import { type Messages } from '../../ui';
+type Props = {
+    shortcuts: ShortcutSettingsProps | null;
+    autoTimezone: boolean;
+    timezone: string;
+    onTimezone: (automatic: boolean, zone: string) => void;
+    workspace: string | undefined;
+    canSources?: boolean;
+    canViewWorkspaceSettings: boolean;
+    onSourceImported: (workspace: string) => void;
+    transport: StudioTransport;
+    portal: HTMLDivElement;
+    t: Messages;
+    locale: string;
+    languages: {
+        id: string;
+        label: string;
+    }[];
+    theme: 'light' | 'dark';
+    onTheme: (theme: 'light' | 'dark') => void;
+    notifications: boolean;
+    browserPush: BrowserPushControl;
+    onLocale: (locale: string) => void;
+    onNotifications: (enabled: boolean) => void;
+    onSaved: (workspace: string, settings: WorkspaceSettings) => void;
+    onClose: () => void;
+};
+export declare function StudioSettings({ shortcuts, autoTimezone, timezone, onTimezone, browserPush, canViewWorkspaceSettings, workspace, canSources, onSourceImported, transport, portal, t, locale, languages, theme, onTheme, notifications, onLocale, onNotifications, onSaved, onClose }: Props): import("react/jsx-runtime").JSX.Element;
+export {};

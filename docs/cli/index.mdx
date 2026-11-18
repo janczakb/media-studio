@@ -1,0 +1,41 @@
+---
+title: "FLEX Studio CLI"
+description: "Download FLEX Studio CLI and import media and image conversions from your terminal."
+mode: "custom"
+---
+
+import CliDownload from '/snippets/cli-download.mdx';
+
+<div className="fms-cli-page">
+  <section className="fms-cli-hero" aria-labelledby="fms-cli-title">
+    <a className="fms-cli-eyebrow" href="/cli/import">Bring your image collection into Studio <span aria-hidden="true">→</span></a>
+    <div className="fms-cli-mark" aria-hidden="true"><span>❯</span><span>_</span></div>
+    <h1 id="fms-cli-title"><span>FLEX Studio</span><span className="fms-cli-display">CLI</span></h1>
+    <div className="fms-cli-intro">
+      <p>FLEX Media Studio, from your terminal.</p>
+      <p>Import folders, preserve image conversions and find files in your workspace.</p>
+      <p>Built for developers, scripts and the AI agents working alongside them.</p>
+    </div>
+    <div className="fms-cli-install"><code>{'npm install -g ./useflex-media-studio-cli-0.1.0.tgz'}</code></div>
+    <div className="fms-cli-links">
+      <CliDownload />
+      <a className="fms-cli-guide" href="/cli/installation">Get started <span aria-hidden="true">↗</span></a>
+    </div>
+    <p className="fms-cli-release">Version 0.1.0 <span aria-hidden="true">·</span> macOS, Linux and Windows <span aria-hidden="true">·</span> Node.js 22+</p>
+  </section>
+
+  <section className="fms-cli-terminal" aria-label="Example terminal session">
+    <div className="fms-cli-terminal-bar"><span className="fms-cli-lights" aria-hidden="true"><i></i><i></i><i></i></span><span>flex-studio · import preview</span></div>
+    <div className="fms-cli-terminal-content">
+      <div className="fms-cli-terminal-line"><span className="fms-cli-prompt" aria-hidden="true">❯</span><code>{'flex-studio import ./catalog --manifest ./images.jsonl --dry-run'}</code></div>
+      <div className="fms-cli-terminal-output"><span>{"chairs/oak-2400.avif"}</span><span aria-hidden="true"> → </span><span>chairs/oak.avif</span></div>
+      <div className="fms-cli-terminal-note">{"Skip chairs/oak-400.avif and chairs/oak-1000.avif"}</div>
+    </div>
+  </section>
+
+  <section className="fms-cli-benefits" aria-label="CLI workflows">
+    <div className="fms-cli-benefit"><span>01</span><h2>Preview the import</h2><p>Check which files belong together and which source will be uploaded.</p></div>
+    <div className="fms-cli-benefit"><span>02</span><h2>Keep or rebuild</h2><p>Attach existing conversions to one image or let Studio generate new sizes.</p></div>
+    <div className="fms-cli-benefit"><span>03</span><h2>Resume a transfer</h2><p>Pick up interrupted chunk uploads where Studio left off.</p></div>
+  </section>
+</div>

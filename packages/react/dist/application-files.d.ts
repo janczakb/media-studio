@@ -1,0 +1,33 @@
+import type { BrowseQuery, Entry, EntryDetails, EntryPage, StudioTransport, Workspace } from './contracts';
+export type ApplicationSource = {
+    id: string;
+    name: string;
+    type: 'disk' | 'model' | 'spatie';
+    readOnly: true;
+};
+export type ApplicationFile = EntryDetails & {
+    readOnly: true;
+    downloadUrl: string | null;
+};
+export type ApplicationFilePage = EntryPage & {
+    readOnly: true;
+};
+export interface ApplicationFilesTransport {
+    sources(signal: AbortSignal): Promise<{
+        enabled: boolean;
+        canDownload: boolean;
+        items: ApplicationSource[];
+    }>;
+    browse(source: string | null, query: BrowseQuery, cursor: string | null, signal: AbortSignal): Promise<ApplicationFilePage>;
+    details(source: string, entry: string, signal: AbortSignal): Promise<ApplicationFile>;
+    neighbors(source: string | null, entry: string, query: BrowseQuery, direction: 'next' | 'previous', signal: AbortSignal, cursor?: string): Promise<EntryPage>;
+    thumbnailStatus?(ids: string[], signal: AbortSignal): Promise<{
+        items: Entry[];
+    }>;
+    contentUrl(source: string, entry: string, download?: boolean): string;
+}
+/** Presentation context only. No workspace is created, resolved or persisted. */
+export type LibraryScope = Omit<Workspace, 'isDefault'> & {
+    kind?: 'workspace' | 'application';
+};
+export declare function applicationLibraryTransport(api: ApplicationFilesTransport, source: string | null): StudioTransport;

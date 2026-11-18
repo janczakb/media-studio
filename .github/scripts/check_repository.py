@@ -189,7 +189,9 @@ def check_publication_boundary() -> None:
             require(name in policy["root_files"], f"Root file is not approved for publication: {name}")
         else:
             require(path.parts[0] in policy["directories"], f"Directory is not approved for publication: {name}")
-    print("PASS: explicit public-file allowlist; private folders and package source excluded")
+            if path.parts[0] == "packages":
+                require(name in policy.get("package_files", []) or any(name.startswith(prefix) for prefix in policy.get("package_prefixes", [])), f"Package path is not approved: {name}")
+    print("PASS: explicit public-file allowlist; private folders excluded; package paths explicitly approved")
 
 
 def main() -> None:

@@ -4,12 +4,41 @@
     ".gitignore",
     "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
+    "COMMERCIAL.md",
     "CONTRIBUTING.md",
     "CREDITS.md",
+    "LICENSE",
     "README.md",
     "SECURITY.md",
     "SUPPORT.md",
-    "VERSION"
+    "VERSION",
+    "composer.json"
   ],
-  "directories": [".github", "art"]
+  "directories": [
+    ".github",
+    "art",
+    "docs",
+    "packages",
+    "resources"
+  ],
+  "package_prefixes": [
+    "packages/laravel/src/",
+    "packages/laravel/config/",
+    "packages/laravel/database/",
+    "packages/laravel/lang/",
+    "packages/laravel/routes/",
+    "packages/laravel/resources/",
+    "packages/media-core/src/",
+    "packages/react/dist/"
+  ],
+  "package_files": [
+    "packages/laravel/composer.json",
+    "packages/laravel/.gitattributes",
+    "packages/laravel/LICENSE",
+    "packages/laravel/COMMERCIAL.md",
+    "packages/media-core/composer.json",
+    "packages/media-core/.gitattributes",
+    "packages/media-core/LICENSE",
+    "packages/media-core/COMMERCIAL.md"
+  ]
 }

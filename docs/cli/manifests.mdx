@@ -1,0 +1,67 @@
+---
+title: "Import manifests and filename patterns"
+description: "Describe originals, conversions, destination folders and thumbnail roles with JSONL."
+---
+
+Use a naming pattern for a consistent image export, or a JSONL manifest when you need explicit originals, different crops or named display roles. Keep the source directory stable while the import runs.
+
+## Group filenames
+
+```bash
+flex-studio import ./photos \
+  --pattern '^(?<key>.+)-(?<variant>original|[0-9]+)\.(?:jpg|avif)$' \
+  --mode rebuild --dry-run --json
+```
+
+Patterns are anchored at both ends and contain named `key` and `variant` captures. Grouping is per directory. The variant `original` explicitly identifies the source. A numeric variant becomes a name such as `size-400`. Supported grouped image extensions are JPEG, PNG, WebP, AVIF and GIF. Files outside the pattern are skipped.
+
+Without an explicit original, Studio CLI measures image headers and chooses the largest pixel area. Equal largest resolutions and aspect ratios differing by more than 2.5% require an explicit source. Verify the plan before transferring.
+
+## Write a JSONL manifest
+
+Each line is a complete JSON object. Store the manifest outside the source directory so an unfiltered import does not upload it as a file.
+
+```jsonl
+{"id":"oak-chair","folder":"products/chairs","target":"oak.jpg","files":[{"path":"chairs/oak-original.jpg","original":true},{"path":"chairs/oak-400.avif","name":"card"},{"path":"chairs/oak-1900.avif","name":"detail"}],"roles":{"thumbnail":"card","preview":"detail"}}
+{"id":"launch-brief","folder":"documents","target":"brief.pdf","files":[{"path":"brief.pdf","original":true}]}
+```
+
+```bash
+flex-studio import ./photos --manifest ./media.jsonl --mode keep --dry-run --json
+```
+
+| Field | Meaning |
+| --- | --- |
+| `id` | Stable group ID, 1–1,024 characters. Keep it consistent when retrying. |
+| `folder` | Destination relative to `--parent`, or the workspace root. Defaults to the selected source's relative directory. |
+| `target` | Destination filename. Its extension must match the chosen source. |
+| `files[].path` | Nonempty regular file relative to the import directory. |
+| `files[].original` | Mark exactly one intended original when automatic selection would be ambiguous. |
+| `files[].name` | Unique retained conversion name. Start with a lowercase letter, followed by lowercase letters, digits, underscores or hyphens, up to 23 characters total. |
+| `roles.thumbnail`, `roles.preview` | Names of retained conversions to use for display in keep mode. |
+
+A group supports one original and up to 12 variants. Multi-file groups contain supported images. The manifest is streamed with a 128 KiB record limit. Relative paths reject traversal and unsupported components and are limited to 32 components. Symbolic links are excluded. Pattern grouping allows at most 10,000 groups per directory. A manifest can describe a large directory incrementally.
+
+## Choose what happens to conversions
+
+In `rebuild` mode, only the selected source is uploaded. Studio uses its configured processing pipeline. In `keep` mode, other files become conversions on the same image version, with the `import-` preset prefix. Display roles must name a retained conversion. Intentional alternative crops can be preserved when the original is explicitly marked.
+
+See [image conversions](/image-conversions) and [transfer limits](/cli/transfers) before importing a large collection.
+
+
+## Schema and resource limits
+
+| Field | Meaning |
+| --- | --- |
+| `id` | Stable group identity, 1–1,024 characters |
+| `folder` | Optional relative destination directory, defaulting to the source directory |
+| `target` | Optional output filename with the selected source's extension |
+| `files` | One source and up to 12 image conversions |
+| `files[].path` | Relative file path beneath the import root |
+| `files[].original` | Explicit source flag, at most one per group |
+| `files[].name` | Required unique lowercase name for a kept conversion |
+| `roles.thumbnail`, `roles.preview` | Kept conversion names assigned to display roles |
+
+A kept name begins with a lowercase letter, followed by up to 22 lowercase letters, digits, underscores or hyphens. The same group cannot repeat a path or preset name. Multi-file groups contain supported image files. Role names must point to kept conversions.
+
+Paths use forward slashes, contain up to 32 components, and exclude absolute paths, empty segments, parent traversal and symlinks. A component is at most 191 Unicode characters. Manifest records are streamed with a 128 KiB line bound. Pattern grouping keeps at most 10,000 image groups per directory. Use a manifest for large flat exports and keep each record independently identifiable.

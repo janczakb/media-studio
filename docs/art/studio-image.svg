@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 390">
+<title>Image conversions</title>
+<defs><radialGradient id="glow"><stop stop-color="#5669bb" stop-opacity=".27"/><stop offset="1" stop-color="#5669bb" stop-opacity="0"/></radialGradient></defs>
+<style>
+text{font-family:system-ui,sans-serif}
+.pulse{animation:pulse 4s ease-in-out infinite}
+.drift{animation:drift 4.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.63}50%{opacity:1}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){.pulse,.drift{animation:none}}
+</style>
+<ellipse cx="332" cy="245" rx="310" ry="172" fill="url(#glow)"/>
+<rect x="68" y="53" width="504" height="334" rx="17" fill="#1b202b" stroke="#444e65" /><path d="M68 98h504" fill="none" stroke="#323b50" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" /><circle cx="85" cy="76" r="2.5" fill="#e17579"/><circle cx="96" cy="76" r="2.5" fill="#edbd72"/><circle cx="107" cy="76" r="2.5" fill="#7ec49b"/><text x="127" y="81" fill="#d9e2f2" font-size="14" font-weight="500">Image conversions</text><rect x="89" y="116" width="221" height="217" rx="12" fill="#173b4d" stroke="none" /><circle cx="243.7" cy="181.1" r="28.21" fill="#85d5be"/><path d="M94 324l68.51 -106.33 41.99 52.08 39.78 -32.55 61.88 86.80000000000001Z" fill="#5888e4" opacity=".74"/><rect x="326" y="116" width="222" height="126" rx="12" fill="#353662" stroke="none" /><circle cx="481.4" cy="153.8" r="16.38" fill="#d191b9"/><path d="M331 233l68.82 -61.74 42.18 30.24 39.96 -18.9 62.160000000000004 50.400000000000006Z" fill="#777fea" opacity=".74"/><rect x="326" y="258" width="109" height="29" rx="8" fill="#374669" stroke="none" /><text x="336" y="277" fill="#d9e2f2" font-size="12" font-weight="500">Original</text><rect x="326" y="298" width="109" height="29" rx="8" fill="#374669" stroke="none" /><text x="336" y="317" fill="#d9e2f2" font-size="12" font-weight="500">Web preview</text>
+</svg>

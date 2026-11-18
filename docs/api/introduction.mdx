@@ -1,0 +1,49 @@
+---
+title: API overview
+description: Connect your services to a workspace with versioned REST endpoints and a typed JavaScript client.
+---
+
+Studio provides two independent integration channels: REST for your application code, and [MCP](/mcp) for AI clients. Both enforce the account's current Studio permissions. An API token grants access to one workspace, not the entire installation.
+
+## Enable REST access
+
+Apply the Studio migrations and enable the API in `config/media-studio.php`:
+
+```php
+'api' => [
+    'enabled' => true,
+    'path' => 'media-studio/rest/v1',
+    'requests_per_minute' => 120,
+    'max_token_days' => 90,
+    'usage_cache_seconds' => 10,
+],
+```
+
+Run `php artisan media-studio:permissions` to create the permission definitions, then assign `studio.api.use` and, for people who issue tokens, `studio.api.manage` through Spatie Permission. Existing file, folder, comment and workspace permissions continue to apply.
+
+Open **AI → API & SDK** inside Studio, select the intended workspace and create a token. A token cannot create access to a workspace that its owner cannot already use.
+
+## First request
+
+```bash
+export STUDIO_API_URL='https://your-app.example/media-studio/rest/v1'
+export STUDIO_WORKSPACE='YOUR_WORKSPACE_ULID'
+# Supply STUDIO_API_TOKEN through your server's secret configuration.
+curl "$STUDIO_API_URL/workspaces/$STUDIO_WORKSPACE/entries?limit=20" \
+  -H "Authorization: Bearer $STUDIO_API_TOKEN" \
+  -H 'Accept: application/json'
+```
+
+The reference pages describe the method, path, input fields and response schema. Change the server address in your copy of the OpenAPI specification (`docs/api/openapi.json` in the package checkout) to your own application before using an interactive request builder. No shared hosted API or public demo credential is provided.
+
+## Available operations
+
+Browse files and folders, read originals and conversions, upload files, resume chunk uploads, use S3 Multipart when configured, update metadata, manage manual tags, trash and restore entries, prepare downloads, and work with notes and comments. The reference only includes registered REST operations.
+
+Account administration, token management, source imports, workspace creation and billable AI analysis are not exposed through REST tokens. Token management uses the signed-in Studio interface. These boundaries are separate from the configurable MCP tools.
+
+## Pagination and updates
+
+Listings use bounded cursor pagination. Pass `nextCursor` unchanged with the same filters for the next page. Do not interpret or store it as a permanent bookmark. File updates require the most recently read `revision`; a conflict returns `409` instead of overwriting newer changes.
+
+Use `Idempotency-Key` for ordinary file uploads and the documented retry key for resumable uploads, notes and comments. Do not automatically retry arbitrary writes.

@@ -12,4 +12,4 @@ FLEX Media Studio is a self-hosted media library for Laravel with optional Filam
 
 Include the installed build/version, relevant dependencies, minimal configuration and steps to reproduce. Remove credentials, private media and personal data from examples.
 
-This repository currently contains the product presentation and repository tooling. Package source and installable distributions are not published here. The repository's automated checks cover its published content, assets, archive rules and maintenance workflows; they do not certify the private package implementation.
+Business licenses include 12 months of priority product support without a guaranteed response time or SLA. Contact barek122@gmail.com privately with your order identification. Do not publish your license key. [Compare plans and purchase](https://shop.bjanczak.com/checkout/buy/b087c01b-c85e-415a-af05-90690053c7d3).

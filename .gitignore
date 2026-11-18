@@ -1,6 +1,5 @@
 /vendor/
 /node_modules/
-/packages/react/dist/
 /examples/standalone/storage/
 /examples/standalone/bootstrap/cache/
 /examples/standalone/database/*.sqlite*

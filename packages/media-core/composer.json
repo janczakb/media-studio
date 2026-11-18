@@ -1,0 +1,52 @@
+{
+    "name": "useflex/media-core",
+    "description": "Framework-independent media processing, transfer integrity and storage contracts.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "UseFlex\\MediaCore\\": "src/"
+        }
+    },
+    "suggest": {
+        "ext-gd": "GD image rendering.",
+        "ext-imagick": "ImageMagick image rendering and metadata preservation.",
+        "ext-mbstring": "Unicode text extraction and AI result validation.",
+        "ext-dom": "Non-executing HTML text extraction."
+    },
+    "archive": {
+        "exclude": [
+            "/.github",
+            "/.internal",
+            "/art",
+            "/docs",
+            "/tests",
+            "/examples",
+            "/example",
+            "/scripts",
+            "/vendor",
+            "/node_modules",
+            "/.ai",
+            "/.agents",
+            "/.codex",
+            "/.claude",
+            "/.cursor",
+            "/.env*",
+            "/.gitattributes",
+            "/.gitignore",
+            "/.editorconfig",
+            "/AGENTS.md",
+            "/CLAUDE.md",
+            "/phpunit.xml",
+            "/phpunit.xml.dist",
+            "/phpstan.neon",
+            "/pint.json",
+            "/composer.lock",
+            "/.phpunit.cache",
+            "/.phpunit.result.cache"
+        ]
+    }
+}

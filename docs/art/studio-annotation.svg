@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 390">
+<title>Image tools</title>
+<defs><radialGradient id="glow"><stop stop-color="#5669bb" stop-opacity=".27"/><stop offset="1" stop-color="#5669bb" stop-opacity="0"/></radialGradient></defs>
+<style>
+text{font-family:system-ui,sans-serif}
+.pulse{animation:pulse 4s ease-in-out infinite}
+.drift{animation:drift 4.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.63}50%{opacity:1}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(prefers-reduced-motion:reduce){.pulse,.drift{animation:none}}
+</style>
+<ellipse cx="332" cy="245" rx="310" ry="172" fill="url(#glow)"/>
+<rect x="82" y="50" width="476" height="304" rx="12" fill="#173b4d" stroke="none" /><circle cx="415.2" cy="141.2" r="39.52" fill="#85d5be"/><path d="M87 345l147.56 -148.96 90.44 72.96 85.67999999999999 -45.6 133.28 121.60000000000001Z" fill="#5888e4" opacity=".74"/><rect x="105" y="82" width="46" height="197" rx="12" fill="#191f2e" stroke="#4c607d" /><path d="M117 107l19 11-9 3-3 8z" fill="none" stroke="#beceec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M117 160l19-19m-20 22h20" fill="none" stroke="#beceec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M118 193h18v17h-18z" fill="none" stroke="#beceec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M119 239h18m-9 0v18" fill="none" stroke="#beceec" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M293 122q15 28 92 76" fill="none" stroke="#ffab80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /><rect x="386" y="184" width="132" height="39" rx="9" fill="#222b3c" stroke="#778cad" /><text x="399" y="209" fill="#d9e2f2" font-size="13" font-weight="500">Check framing</text>
+</svg>

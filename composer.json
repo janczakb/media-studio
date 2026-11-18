@@ -1,0 +1,112 @@
+{
+    "name": "useflex/media-studio",
+    "description": "Self-hosted media library for Laravel with workspace storage, optional AI and Filament integrations.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.3",
+        "illuminate/auth": "^12.0 || ^13.0",
+        "illuminate/database": "^12.0 || ^13.0",
+        "illuminate/filesystem": "^12.0 || ^13.0",
+        "illuminate/routing": "^12.0 || ^13.0",
+        "illuminate/support": "^12.0 || ^13.0",
+        "illuminate/validation": "^12.0 || ^13.0",
+        "maennchen/zipstream-php": "^3.2",
+        "spatie/laravel-permission": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "UseFlex\\MediaStudio\\": "packages/laravel/src/",
+            "UseFlex\\MediaCore\\": "packages/media-core/src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "UseFlex\\MediaStudio\\MediaStudioServiceProvider"
+            ]
+        }
+    },
+    "suggest": {
+        "spatie/laravel-medialibrary": "Optional Spatie Media Library v11 integration for existing media, collections and conversions.",
+        "laravel/mcp": "Optional Laravel MCP ^1.1 server for authorized AI client access.",
+        "guzzlehttp/guzzle": "HTTP client (^7.9 or ^8.0) for the optional Web Push transport.",
+        "minishlink/web-push": "Optional Web Push transport (^11.0) for desktop notifications.",
+        "laravel/ai": "Optional Laravel AI SDK (^1.4) for the configurable Studio chat assistant.",
+        "laravel/fortify": "Optional standalone account module (^1.42): login, verified email, password reset and two-factor authentication.",
+        "waguilar33/filament-guardian": "Optional Filament role editor (^1.15) compatible with the required Spatie Permission v8.",
+        "laravel/boost": "Optional development-time guidelines and media-studio-development skill discovery; not required by Studio at runtime."
+    },
+    "archive": {
+        "exclude": [
+            "/.github",
+            "/.internal",
+            "/art",
+            "/docs",
+            "/tests",
+            "/examples",
+            "/example",
+            "/scripts",
+            "/vendor",
+            "/node_modules",
+            "/.ai",
+            "/.agents",
+            "/.codex",
+            "/.claude",
+            "/.cursor",
+            "/.env*",
+            "/.gitattributes",
+            "/.gitignore",
+            "/.editorconfig",
+            "/AGENTS.md",
+            "/CLAUDE.md",
+            "/phpunit.xml",
+            "/phpunit.xml.dist",
+            "/phpstan.neon",
+            "/pint.json",
+            "/composer.lock",
+            "/.phpunit.cache",
+            "/.phpunit.result.cache",
+            "/packages/react/src",
+            "/packages/react/styles",
+            "/packages/react/build.mjs",
+            "/packages/react/package.json",
+            "/packages/react/tsconfig.json",
+            "/packages/browser-extension",
+            "/packages/cli",
+            "/packages/cloudflare-worker",
+            "/packages/laravel/composer.json",
+            "/packages/media-core/composer.json"
+        ]
+    },
+    "homepage": "https://studio.bjanczak.com/",
+    "keywords": [
+        "laravel",
+        "filament",
+        "media-library",
+        "media-manager",
+        "digital-asset-management",
+        "self-hosted",
+        "s3",
+        "ai",
+        "mcp"
+    ],
+    "support": {
+        "docs": "https://studio.bjanczak.com/",
+        "issues": "https://github.com/janczakb/media-studio/issues",
+        "source": "https://github.com/janczakb/media-studio"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/janczakb"
+        },
+        {
+            "type": "other",
+            "url": "https://buymeacoffee.com/janczakb"
+        }
+    ],
+    "replace": {
+        "useflex/media-core": "self.version"
+    }
+}

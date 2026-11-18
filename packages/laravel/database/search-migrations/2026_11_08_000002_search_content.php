@@ -1,0 +1,27 @@
+<?php
+
+declare(strict_types=1);
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('fms_search_content', function (Blueprint $table): void {
+            $table->foreignId('entry_id')->primary()->constrained('fms_entries')->cascadeOnDelete();
+            $table->ulid('version_id');
+            $table->char('fingerprint', 64);
+            $table->string('state', 16);
+            $table->text('content');
+            $table->timestamp('updated_at');
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('fms_search_content');
+    }
+};

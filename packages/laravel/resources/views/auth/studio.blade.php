@@ -1,0 +1,5 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="csrf-token" content="{{ csrf_token() }}"><title>Media Studio</title><style>html,body{margin:0;height:100%;overflow:hidden}#studio{height:100dvh}</style></head><body><div id="studio"></div><script type="module">
+const base=@json(url(config('media-studio.auth.prefix','studio/auth')));
+const {mountMediaStudio,createHttpTransport}=await import(base+'/assets/studio.js');
+mountMediaStudio(document.getElementById('studio'),{syncUrl:true,user:@json(app(config('media-studio.member_profiles.resolver'))->resolve(auth()->user())),stylesheetUrl:base+'/assets/studio.css',transport:createHttpTransport({baseUrl:@json(url(config('media-studio.routes.prefix'))),csrfToken:()=>document.querySelector('meta[name=csrf-token]').content}),onAccountSecurity:()=>{location.href=base+'/security';},onLogout:async()=>{await fetch(base+'/logout',{method:'POST',headers:{'Accept':'application/json','X-CSRF-TOKEN':document.querySelector('meta[name=csrf-token]').content}});location.href=base+'/login';}});
+</script></body></html>
