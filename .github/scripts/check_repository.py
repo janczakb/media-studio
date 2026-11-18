@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+import json
 import struct
 import subprocess
 import tarfile
@@ -145,7 +146,7 @@ def check_archive() -> None:
         fixture.mkdir()
         (fixture / ".gitattributes").write_bytes((ROOT / ".gitattributes").read_bytes())
         required = {
-            "composer.json", "LICENSE", "src/MediaStudioServiceProvider.php",
+            "composer.json", "LICENSE", "COMMERCIAL.md", "CREDITS.md", "VERSION", "src/MediaStudioServiceProvider.php",
             "config/media-studio.php", "database/migrations/create_media.php", "lang/en/messages.php",
             "resources/views/picker.blade.php", "resources/boost/guidelines/core.blade.php",
             "resources/boost/skills/media-studio-development/SKILL.md",
@@ -168,7 +169,24 @@ def check_archive() -> None:
     print("PASS: real Git archive exclusions and runtime/Boost/build preservation")
 
 
+def check_publication_boundary() -> None:
+    policy = json.loads((ROOT / ".github/publication-allowlist.json").read_text(encoding="utf-8"))
+    files = git(ROOT, "ls-files", "-z").split("\0")
+    private = {".internal", ".ai", ".agents", ".codex", ".claude", ".cursor", "dumps", "scratch", "tmp", "temp", "vendor", "node_modules", "__pycache__"}
+    for name in filter(None, files):
+        path = Path(name)
+        require(not private.intersection(path.parts), f"Private folder in publication: {name}")
+        require(not any(part.startswith(".env") or part in {"auth.json", ".npmrc"} for part in path.parts), f"Private configuration in publication: {name}")
+        require(path.suffix.lower() not in {".sql", ".sqlite", ".sqlite3", ".log", ".pyc"}, f"Internal data file in publication: {name}")
+        if len(path.parts) == 1:
+            require(name in policy["root_files"], f"Root file is not approved for publication: {name}")
+        else:
+            require(path.parts[0] in policy["directories"], f"Directory is not approved for publication: {name}")
+    print("PASS: explicit public-file allowlist; private folders and package source excluded")
+
+
 def main() -> None:
+    check_publication_boundary()
     check_readme()
     check_artwork()
     check_workflows()

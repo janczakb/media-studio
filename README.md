@@ -341,6 +341,6 @@ If Studio fits your workflow, [star the repository](https://github.com/janczakb/
 
 Help sustain the development of Media Studio and the FLEX ecosystem through **[GitHub Sponsors](https://github.com/sponsors/janczakb)** or **[Buy Me a Coffee](https://buymeacoffee.com/janczakb)**.
 
-[Report an issue](https://github.com/janczakb/media-studio/issues) · [Discussions](https://github.com/janczakb/media-studio/discussions) · [Support](SUPPORT.md) · [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md)
+[Report an issue](https://github.com/janczakb/media-studio/issues) · [Discussions](https://github.com/janczakb/media-studio/discussions) · [Changelog](CHANGELOG.md) · [Support](SUPPORT.md) · [Contributing](CONTRIBUTING.md) · [Code of conduct](CODE_OF_CONDUCT.md) · [Security](SECURITY.md) · [Credits](CREDITS.md)
 
 © 2026 Bartłomiej Janczak.

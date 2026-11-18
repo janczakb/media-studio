@@ -1,0 +1,15 @@
+{
+  "root_files": [
+    ".gitattributes",
+    ".gitignore",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "CREDITS.md",
+    "README.md",
+    "SECURITY.md",
+    "SUPPORT.md",
+    "VERSION"
+  ],
+  "directories": [".github", "art"]
+}
