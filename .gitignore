@@ -38,3 +38,5 @@ auth.json
 *.sqlite
 *.sqlite3
 *.log
+
+/composer.lock

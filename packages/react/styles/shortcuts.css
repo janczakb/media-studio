@@ -1,0 +1,107 @@
+/* Adapted from Arc UI shortcut-recorder.module.css at user request. */
+.fms-shortcuts-settings {
+ --border-strong:oklch(82% 0 0);--border-subtle:oklch(96.5% 0 0);--surface-raised:#fff;--surface-muted:#f4f4f5;
+ --font-body:inherit;--tracking-body:0;--text-xs:12px;--text-sm:13px;--leading-body:1.4;
+ --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-6:24px;
+ --control-height-md:40px;--control-height-sm:32px;--radius-control:14px;--radius-pill:999px;
+ --duration-instant:.1s;--duration-fast:.15s;--duration-standard:.2s;--duration-spring:.44s;
+ --ease-standard:cubic-bezier(.22,1,.36,1);--ease-in-out:cubic-bezier(.65,0,.35,1);
+ --ease-spring:linear(0,.0213,.0739,.1443,.2235,.305,.3849,.4606,.5305,.594,.6508,.7011,.7452,.7836,.8168,.8454,.8699,.8907,.9084,.9234,.9361,.9467,.9557,.9632,.9694,.9747,.979,.9826,.9857,.9882,.9902,.992,.9934,.9946,.9955,.9963,1);
+ --text-muted:var(--muted);--text-secondary:var(--foreground);--accent-subtle:color-mix(in oklab,var(--accent) 10%,transparent);--accent-strong:var(--foreground);--warning:#b6780a;
+ display:grid;gap:20px;padding:20px 24px 28px;
+}
+.dark .fms-shortcuts-settings{--border-strong:oklch(40% 0 0);--border-subtle:oklch(25% 0 0);--surface-raised:oklch(24% 0 0);--surface-muted:oklch(26% 0 0);--warning:#e8b45a;}
+.fms-shortcuts-settings>.fms-settings-note{margin:0;padding:0;}
+.fms-shortcuts-recorders{display:grid;gap:18px;}
+.fms-shortcuts-title{font-size:14px;font-weight:600;margin:0;}
+.fms-shortcuts-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.fms-shortcuts-platform{font-size:12px;color:var(--muted);}
+.fms-shortcuts-divider{border:0;border-block-start:1px solid var(--border);margin:0;}
+.fms-arc-recorder{padding-inline:9px 6px;text-align:start;}
+.fms-arc-messageSlot{min-height:0;}
+@media(max-width:540px){.fms-shortcuts-settings{padding:16px;}}
+/* ---------------------------------------------- Kbd ---------------------------------------------- */
+
+/* A key cap: a one pixel edge with a slightly heavier bottom, so it reads as a key without a shadow. Held, it drops a pixel and takes the accent. */
+.fms-arc-kbd { display: inline-grid; min-width: 26px; height: 26px; box-sizing: border-box; place-items: center; padding: 0 7px 1px; border: 1px solid var(--border-strong); border-bottom-width: 2px; border-radius: 8px; background: var(--surface-raised); color: var(--foreground); font-family: var(--font-body); font-size: var(--text-xs); font-weight: 500; line-height: 1; letter-spacing: 0; font-variant-numeric: tabular-nums; white-space: nowrap; transition: transform var(--duration-spring) var(--ease-spring), border-color var(--duration-fast) var(--ease-standard), background-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard), border-bottom-width var(--duration-fast) var(--ease-standard); }
+.fms-arc-kbd[data-size="sm"] { min-width: 22px; height: 22px; padding: 0 5px 1px; border-radius: 7px; font-size: var(--text-xs); }
+.fms-arc-kbd[data-pressed] { transform: translateY(1px); border-color: color-mix(in oklab, var(--accent) 55%, var(--border-strong)); border-bottom-width: 1px; background: var(--accent-subtle); color: var(--accent-strong); transition-duration: var(--duration-instant); }
+.fms-arc-kbd[data-tone="warning"] { border-color: color-mix(in oklab, var(--warning) 55%, var(--border-strong)); background: color-mix(in oklab, var(--warning) 12%, var(--surface-raised)); color: var(--foreground); }
+.fms-arc-keys { display: inline-flex; flex: none; align-items: center; gap: 4px; }
+
+/* ---------------------------------------------- Recorder ---------------------------------------------- */
+
+.fms-arc-field { display: grid; min-width: 0; font-family: var(--font-body); letter-spacing: var(--tracking-body); }
+.fms-arc-label { justify-self: start; margin-bottom: var(--space-2); color: var(--foreground); font-size: var(--text-sm); font-weight: 500; line-height: var(--leading-body); }
+
+.fms-arc-control { position: relative; display: flex; min-width: 0; height: var(--control-height-md); box-sizing: border-box; align-items: center; border: 1px solid var(--border-strong); border-radius: var(--radius-control); background: var(--surface); transition: border-color var(--duration-fast) var(--ease-standard), background-color var(--duration-fast) var(--ease-standard); }
+@media (hover: hover) and (pointer: fine) { .fms-arc-control[data-state="idle"]:hover { border-color: var(--foreground); } }
+.fms-arc-control:has(.fms-arc-recorder:focus-visible) { border-color: var(--foreground); }
+.fms-arc-control[data-state="recording"] { border-color: var(--accent); background: color-mix(in oklab, var(--accent) 4%, var(--surface)); }
+.fms-arc-control[data-state="conflict"] { border-color: var(--warning); }
+.fms-arc-field[data-disabled] .fms-arc-control { opacity: .5; background: var(--surface-muted); }
+
+.fms-arc-recorder { display: flex; min-width: 0; height: 100%; flex: 1; align-items: center; padding: 0 6px 0 9px; border: 0; border-radius: var(--radius-control); background: transparent; color: var(--foreground); cursor: pointer; font: inherit; text-align: left; -webkit-tap-highlight-color: transparent; touch-action: manipulation; outline: none; }
+.fms-arc-recorder:disabled { cursor: not-allowed; }
+.fms-arc-row { position: relative; display: flex; min-width: 0; align-items: center; gap: 4px; }
+.fms-arc-chipSlot { display: inline-flex; }
+.fms-arc-placeholder { padding-left: 3px; color: var(--text-muted); font-size: var(--text-sm); white-space: nowrap; }
+.fms-arc-placeholder[data-recording] { color: var(--text-secondary); }
+/* A recording light: steady in reduced motion, a slow breath otherwise. */
+.fms-arc-dot { width: 7px; height: 7px; flex: none; margin: 0 6px 0 3px; border-radius: 50%; background: var(--accent); animation: fms-arc-breathe 1.4s var(--ease-in-out) infinite; } /* motion: continuous recording pulse */
+.fms-arc-dot[data-reduced] { animation: none; }
+@keyframes fms-arc-breathe { 50% { opacity: .35; } }
+
+.fms-arc-actions { display: flex; flex: none; align-items: center; gap: 2px; padding-right: 4px; }
+.fms-arc-action { display: grid; width: 32px; height: 32px; place-items: center; padding: 0; border: 0; border-radius: calc(var(--radius-control) - 5px); background: transparent; color: var(--text-muted); cursor: pointer; -webkit-tap-highlight-color: transparent; transition: background-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard); }
+@media (hover: hover) and (pointer: fine) { .fms-arc-action:hover { background: var(--surface-muted); color: var(--foreground); } }
+.fms-arc-action:active, .fms-arc-action:focus-visible { background: var(--surface-muted); color: var(--foreground); outline: none; }
+
+.fms-arc-messageSlot { position: relative; overflow: hidden; }
+.fms-arc-message { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 2px var(--space-3); padding-top: var(--space-2); font-size: var(--text-xs); line-height: var(--leading-body); }
+.fms-arc-message[data-tone="hint"] { color: var(--text-muted); }
+.fms-arc-message[data-tone="warning"] { color: var(--text-secondary); }
+.fms-arc-message[data-tone="warning"] .fms-arc-messageText::before { content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 7px 1px 1px; border-radius: 50%; background: var(--warning); vertical-align: middle; }
+.fms-arc-strong { color: var(--foreground); font-weight: 500; }
+.fms-arc-messageActions { display: inline-flex; gap: var(--space-3); }
+.fms-arc-link { padding: 0; border: 0; background: none; color: var(--foreground); cursor: pointer; font: inherit; font-weight: 500; text-decoration: underline; text-decoration-color: var(--border-strong); text-underline-offset: 3px; transition: text-decoration-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard); }
+.fms-arc-link:focus-visible { text-decoration-color: currentColor; outline: none; }
+.fms-arc-link[data-quiet] { color: var(--text-muted); font-weight: 400; text-decoration: none; }
+@media (hover: hover) and (pointer: fine) { .fms-arc-link:hover { text-decoration-color: currentColor; } .fms-arc-link[data-quiet]:hover { color: var(--foreground); } }
+
+/* ---------------------------------------------- Cheatsheet ---------------------------------------------- */
+
+.fms-arc-list { container-type: inline-size; display: grid; min-width: 0; gap: var(--space-3); font-family: var(--font-body); letter-spacing: var(--tracking-body); }
+.fms-arc-searchRow { display: flex; height: var(--control-height-sm); box-sizing: border-box; align-items: center; gap: var(--space-2); padding: 0 6px 0 12px; border: 1px solid var(--border); border-radius: var(--radius-control); background: var(--surface); transition: border-color var(--duration-fast) var(--ease-standard); }
+.fms-arc-searchRow:focus-within { border-color: var(--foreground); }
+.fms-arc-searchIcon { flex: none; color: var(--text-muted); }
+.fms-arc-search { min-width: 0; height: 100%; flex: 1; padding: 0; border: 0; background: transparent; color: var(--foreground); font: inherit; font-size: var(--text-sm); outline: none; -webkit-appearance: none; appearance: none; }
+.fms-arc-search::placeholder { color: var(--text-muted); }
+.fms-arc-search::-webkit-search-cancel-button { display: none; }
+.fms-arc-count { flex: none; color: var(--text-muted); font-size: var(--text-xs); font-variant-numeric: tabular-nums; }
+.fms-arc-clear { display: grid; width: 24px; height: 24px; flex: none; place-items: center; padding: 0; border: 0; border-radius: var(--radius-pill); background: color-mix(in oklab, var(--foreground) 8%, transparent); color: var(--text-secondary); cursor: pointer; }
+.fms-arc-clear:focus-visible { background: color-mix(in oklab, var(--foreground) 14%, transparent); color: var(--foreground); outline: none; }
+
+.fms-arc-groups { display: grid; align-items: start; gap: 0 var(--space-6); }
+@container (min-width: 520px) { .fms-arc-groups { grid-template-columns: 1fr 1fr; } }
+.fms-arc-group { overflow: hidden; margin-inline: -8px; padding-inline: 8px; }
+.fms-arc-groupLabel { margin: 0; padding: var(--space-3) 0 var(--space-1); color: var(--text-muted); font-size: var(--text-xs); font-weight: 400; }
+.fms-arc-rows { display: grid; margin: 0; padding: 0; list-style: none; }
+.fms-arc-item { overflow: hidden; margin-inline: -8px; }
+/* Rows fade when a held modifier is not in them, and light when their whole combination is down. */
+.fms-arc-itemInner { display: flex; min-height: 36px; align-items: center; justify-content: space-between; gap: var(--space-3); padding: 0 8px; border-radius: 10px; transition: opacity var(--duration-standard) var(--ease-standard), background-color var(--duration-fast) var(--ease-standard); }
+.fms-arc-item + .fms-arc-item .fms-arc-itemInner { box-shadow: inset 0 1px 0 var(--border-subtle); }
+.fms-arc-item[data-dim] .fms-arc-itemInner { opacity: .38; }
+.fms-arc-item[data-match] .fms-arc-itemInner { background: var(--accent-subtle); box-shadow: none; }
+.fms-arc-item[data-match] + .fms-arc-item .fms-arc-itemInner { box-shadow: none; }
+.fms-arc-itemLabel { min-width: 0; overflow: hidden; color: var(--text-secondary); font-size: var(--text-sm); text-overflow: ellipsis; white-space: nowrap; transition: color var(--duration-fast) var(--ease-standard); }
+.fms-arc-item[data-match] .fms-arc-itemLabel { color: var(--foreground); }
+.fms-arc-empty { margin: 0; padding: var(--space-4) 0; color: var(--text-muted); font-size: var(--text-sm); }
+
+.fms-arc-srOnly { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fms-arc-kbd, .fms-arc-control, .fms-arc-itemInner { transition-duration: 0ms; }
+  .fms-arc-kbd[data-pressed] { transform: none; }
+  .fms-arc-dot { animation: none; }
+}

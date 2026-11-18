@@ -108,5 +108,24 @@
     ],
     "replace": {
         "useflex/media-core": "self.version"
+    },
+    "require-dev": {
+        "laravel/ai": "^1.4",
+        "laravel/fortify": "^1.42",
+        "laravel/mcp": "^1.1",
+        "laravel/pint": "^1.0",
+        "minishlink/web-push": "^11.0",
+        "orchestra/testbench": "^11.3",
+        "phpunit/phpunit": "^12.5",
+        "spatie/laravel-medialibrary": "^11"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "UseFlex\\MediaStudio\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:integrations": "cd tests/integrations && composer test"
     }
 }

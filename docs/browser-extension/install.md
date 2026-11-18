@@ -3,7 +3,7 @@ title: "Install and connect the extension"
 description: "Set up the server integration, load Chrome or Firefox builds and approve a workspace."
 ---
 
-This guide covers the development builds present in the repository. You need a reachable Media Studio installation, an account allowed to upload into the destination workspace, and a compatible browser.
+Download a ready-built ZIP below; no Node.js or local compilation is needed for installation. These are direct release downloads, not Chrome Web Store or Firefox Add-ons listings. You need a reachable Media Studio installation, an account allowed to upload into the destination workspace, and a compatible browser.
 
 ## Enable the server integration
 
@@ -48,7 +48,16 @@ Apply configuration changes through your application's normal deployment process
 
 Studio also requires write access to the destination workspace. Install the package's permission definitions and assign the needed abilities through your existing roles. [Permissions and roles](/filament-permissions)
 
-## Load a build
+## Download a ready-built extension
+
+| Browser | Download | Installation |
+| --- | --- | --- |
+| Chrome 120+ / Edge | [Download ZIP](https://github.com/janczakb/media-studio/releases/download/v0.1.0/flex-capture-chrome.zip) | Extract, open `chrome://extensions` or `edge://extensions`, enable Developer mode and load the extracted folder. |
+| Firefox 140+ | [Download ZIP](https://github.com/janczakb/media-studio/releases/download/v0.1.0/flex-capture-firefox.zip) | Extract, open `about:debugging#/runtime/this-firefox`, choose Load Temporary Add-on and select `manifest.json`. |
+
+[SHA-256 checksums](https://github.com/janczakb/media-studio/releases/download/v0.1.0/SHA256SUMS.txt) are provided alongside the ZIPs. Firefox temporary installations are removed when Firefox restarts. A signed permanent Firefox add-on and store-installed Chrome version require separate store publication; these downloads do not claim to be store versions.
+
+## Build from source (optional)
 
 With the checkout's dependencies installed, build the extension from the repository root.
 

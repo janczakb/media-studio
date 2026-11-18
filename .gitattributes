@@ -77,3 +77,6 @@
 /package.json export-ignore
 /package-lock.json export-ignore
 /tsconfig.json export-ignore
+
+/packages/media-core/tests export-ignore
+/packages/media-core/phpunit.xml export-ignore

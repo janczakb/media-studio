@@ -40,3 +40,7 @@ Choose a variant in checkout and keep the order receipt and generated license ke
 ## Updates and continued use
 
 The 12-month period covers new versions released during that period. It is not a 12-month runtime rental. Expiry alone must not shut down a covered application. Retain your deployment artifacts and lockfile as part of your own backup policy. Provider migrations do not change the purchased contractual scope.
+
+## Public installation and license verification
+
+Install through public Composer/Packagist. The package does not request a commercial key during installation or runtime. Keys identify purchases for license and support verification; the private Composer channel is disabled for Media Studio. Access to public source does not grant business production rights beyond the purchased license terms.

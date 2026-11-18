@@ -7,20 +7,23 @@ Media Studio can use an existing Laravel login, a Filament panel, or its own [st
 
 ## License scope
 
-Personal noncommercial use and evaluation are free. For business production, [purchase a license](https://shop.bjanczak.com/checkout/buy/b087c01b-c85e-415a-af05-90690053c7d3) and review [plans and terms](/licensing). Keep your license key private.
+Personal noncommercial use and evaluation are free. For business production, [purchase a license](https://shop.bjanczak.com/checkout/buy/b087c01b-c85e-415a-af05-90690053c7d3) and review [plans and terms](/licensing).
 
 ## Add the package
 
-The public source-available distribution contains the Laravel integration, Media Core and prebuilt browser assets. Until a Packagist listing is available, register the public Git repository once:
+The public source-available distribution contains the Laravel integration, Media Core and prebuilt browser assets. Install it from the public Composer registry after the Packagist listing has been submitted:
 
 ```bash
-composer config repositories.media-studio vcs https://github.com/janczakb/media-studio
 composer require useflex/media-studio:^0.1.0
 php artisan vendor:publish --tag=media-studio-assets --force
 php artisan vendor:publish --tag=media-studio-config
 php artisan vendor:publish --tag=media-studio-migrations
 php artisan migrate
 ```
+
+No license key, private Composer repository or runtime activation is required to download or install the public package. A commercial license grants the legal right to business production use.
+
+If Packagist has not indexed the package yet, register `https://github.com/janczakb/media-studio` as a VCS repository in your application, then run the same require command.
 
 Check the package's Composer constraints against your host PHP and Laravel versions. Register the authenticatable classes that represent the users of Studio. Use a [private local disk](/storage-local) or [private S3 disk](/storage-s3) for managed originals.
 
@@ -34,30 +37,6 @@ Check the package's Composer constraints against your host PHP and Laravel versi
     'root' => 'flex-media-studio',
 ],
 ```
-
-## Install using your commercial license key
-
-The license server also offers a Composer repository for paid purchases. Use this instead of the GitHub VCS repository when you want the server to return releases covered by your update entitlement:
-
-```bash
-composer config repositories.media-studio composer https://license.bjanczak.com/v1/media-studio/composer
-composer require useflex/media-studio:^0.1.0
-```
-
-Provide HTTP Basic credentials through your deployment secret manager using Composer's `COMPOSER_AUTH` environment variable. The username is `license`; the password is your purchased license key. The JSON structure is:
-
-```json
-{
-  "http-basic": {
-    "license.bjanczak.com": {
-      "username": "license",
-      "password": "YOUR_LICENSE_KEY"
-    }
-  }
-}
-```
-
-Do not commit this value or paste it into public logs. Downloads do not count as domain activations. The public source remains available for eligible personal use and evaluation; a public download does not grant commercial production rights. The commercial repository filters new releases by the purchased update window and preserves covered archived releases after expiry.
 
 ## Pick an interface
 

@@ -1,0 +1,68 @@
+.fms-integrations-page{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:32px;container-type:inline-size;}
+.fms-integrations-container{width:100%;max-width:1120px;margin-inline:auto;}
+.fms-integrations-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:40px;}
+.fms-integrations-heading h1{font-size:28px;font-weight:650;letter-spacing:-.6px;margin:0 0 6px;}
+.fms-integrations-heading p,.fms-integrations-section-heading p{color:var(--muted);font-size:14px;margin:0;line-height:1.6;}
+.fms-integrations-section-heading{margin-bottom:20px;}
+.fms-integrations-section-heading h2{font-size:19px;font-weight:600;margin:0 0 5px;}
+.fms-integrations-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px;}
+.fms-integration-tile{border:1px solid var(--border);}
+.fms-integrations-categories{width:fit-content;max-width:100%;}
+.fms-integration-card{display:flex;flex-direction:row;align-items:flex-start;gap:16px;padding:4px;}
+.fms-integration-card>div:last-child{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:10px;}
+.fms-integration-card h3{font-size:16px;font-weight:600;margin:0;}
+.fms-integration-card p{font-size:14px;line-height:1.6;color:var(--muted);margin:0;}
+.fms-integration-card-icon{display:flex;align-items:center;justify-content:center;flex:none;width:52px;height:52px;border-radius:12px;background:var(--surface-secondary);}
+.fms-integration-card-icon.is-slack,.fms-integration-brand.is-slack{color:#611f69;background:#f8f3f8;}
+.fms-integration-card-icon.is-api{color:#3572b8;background:#f1f6fb;}
+.fms-integration-card-icon.is-mcp{color:#7352b9;background:#f5f2fa;}
+.fms-integration-hero{display:grid;grid-template-columns:144px minmax(0,680px);align-items:center;gap:32px;margin:30px 0;}
+.fms-integration-brand{width:144px;height:144px;border-radius:24px;display:grid;place-items:center;}
+.fms-integration-title{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+.fms-integration-title h2{font-size:28px;font-weight:650;letter-spacing:-.5px;margin:0;}
+.fms-integration-hero p{font-size:15px;line-height:1.7;color:var(--muted);max-width:620px;margin:0 0 18px;}
+.fms-integration-explainer{margin-top:36px;max-width:800px;}
+.fms-integration-explainer h3{font-size:18px;font-weight:600;margin:0 0 8px;}
+.fms-integration-explainer p{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 12px;}
+.fms-integration-features{display:flex;flex-wrap:wrap;gap:14px 24px;margin-top:20px;}
+.fms-integration-features>div{display:flex;align-items:center;gap:8px;}
+.fms-integration-features svg{color:var(--accent);flex:none;}
+.fms-integration-connection{display:flex;align-items:center;gap:32px;padding:20px 24px;flex-wrap:wrap;}
+.fms-integration-connection>div{display:flex;flex-direction:column;gap:4px;}
+.fms-integration-connection>div>span,.fms-integration-connection small{font-size:12px;color:var(--muted);}
+.fms-integration-connection strong{font-size:14px;font-weight:500;}
+.fms-integration-connection>button{margin-inline-start:auto;}
+.fms-integration-steps{list-style:none;padding:0;margin:24px 0;display:flex;flex-direction:column;gap:24px;}
+.fms-integration-steps li{display:flex;align-items:flex-start;gap:16px;}
+.fms-integration-steps li>span{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;background:var(--surface-secondary);font-size:13px;}
+.fms-integration-steps h4{font-size:14px;font-weight:600;margin:2px 0 5px;}
+.fms-integration-form{display:flex;flex-direction:column;gap:22px;}
+.fms-integration-events{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;}
+.fms-integration-events legend{font-weight:500;font-size:14px;margin-bottom:12px;}
+.fms-integration-message{font-size:14px;line-height:1.6;margin:20px 0;color:var(--muted);}
+.fms-integration-message p{margin:6px 0;}
+.fms-integration-loading{display:flex;align-items:center;gap:10px;padding:12px 0;}
+.fms-integration-announcement{font-size:13px;color:var(--muted);margin-top:20px;}
+@container(max-width:650px){.fms-integrations-grid{grid-template-columns:minmax(0,1fr);}.fms-integrations-heading{align-items:flex-start;flex-direction:column;gap:16px;margin-bottom:28px;}.fms-integration-hero{grid-template-columns:80px minmax(0,1fr);gap:18px;align-items:flex-start;}.fms-integration-brand{width:80px;height:80px;border-radius:18px;}.fms-integration-brand svg{width:44px;height:44px;}.fms-integration-title{flex-wrap:wrap;gap:8px;}.fms-integration-title h2{font-size:24px;}.fms-integration-hero p{font-size:14px;}}
+@media(max-width:600px){.fms-integrations-page{padding:24px 18px;}.fms-integration-card{padding:2px;gap:14px;}}
+
+.fms-integration-category-label{white-space:nowrap;}
+
+.fms-slack-connect{display:flex;align-items:flex-end;gap:12px;max-width:440px;}
+.fms-slack-connect>div{flex:1;min-width:0;}
+.fms-slack-connect>button{flex:none;}
+.fms-slack-summary{display:flex;flex-direction:column;gap:4px;font-size:14px;}
+.fms-slack-summary span{color:var(--muted);font-size:12px;}
+@container(max-width:500px){.fms-slack-connect{align-items:stretch;flex-direction:column;}.fms-slack-connect>button{align-self:flex-start;}}
+
+.fms-capture-approval-body{display:flex;flex-direction:column;gap:20px}
+.fms-capture-approval .fms-capture-intro{margin:0;font-size:14px;line-height:1.6;color:var(--muted)}
+.fms-capture-verification{display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px 16px;border-radius:12px;background:var(--surface-secondary);border:1px solid var(--separator)}
+.fms-capture-verification strong{font:600 26px/1.3 ui-monospace,SFMono-Regular,monospace;letter-spacing:.16em;padding-inline-start:.16em;color:var(--foreground)}
+.fms-capture-verification span{font-size:12px;color:var(--muted);overflow-wrap:anywhere}
+.fms-capture-approval-body>.select{width:100%}
+.fms-capture-permissions{display:flex;flex-direction:column;gap:8px;padding-top:4px}
+.fms-capture-permissions h3{margin:0;font-size:13px;font-weight:600;color:var(--foreground)}
+.fms-capture-permissions p{margin:0;font-size:13px;line-height:1.6;color:var(--muted)}
+.fms-capture-approval .fms-capture-error{background:var(--danger-soft);color:var(--danger-soft-foreground);border:1px solid color-mix(in srgb,var(--danger) 30%,transparent);box-shadow:none;border-radius:12px;gap:10px}
+.fms-capture-error .alert__description{color:inherit;line-height:1.5}

@@ -1,0 +1,19 @@
+import type {Asset,CaptureBatch,Job,StoredBlob} from './types';
+let opening:Promise<IDBDatabase>|null=null;
+export function database():Promise<IDBDatabase>{return opening??=new Promise((resolve,reject)=>{const req=indexedDB.open('flex-capture-v1',1);req.onupgradeneeded=()=>{const db=req.result;for(const key of ['batches','jobs','blobs'])db.createObjectStore(key,{keyPath:'id'});};req.onsuccess=()=>{req.result.onversionchange=()=>{req.result.close();opening=null;};resolve(req.result);};req.onerror=()=>{opening=null;reject(req.error);};});}
+export async function read<T>(store:string,id:string):Promise<T|undefined>{const db=await database();return new Promise((resolve,reject)=>{const tx=db.transaction(store);const req=tx.objectStore(store).get(id);req.onsuccess=()=>resolve(req.result as T|undefined);req.onerror=()=>reject(req.error);});}
+export async function list<T>(store:string):Promise<T[]>{const db=await database();return new Promise((resolve,reject)=>{const req=db.transaction(store).objectStore(store).getAll();req.onsuccess=()=>resolve(req.result as T[]);req.onerror=()=>reject(req.error);});}
+export async function save(store:string,value:unknown):Promise<void>{const db=await database();await new Promise<void>((resolve,reject)=>{const tx=db.transaction(store,'readwrite');tx.objectStore(store).put(value);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);});}
+export async function remove(store:string,id:string):Promise<void>{const db=await database();await new Promise<void>((resolve,reject)=>{const tx=db.transaction(store,'readwrite');tx.objectStore(store).delete(id);tx.oncomplete=()=>resolve();tx.onerror=()=>reject(tx.error);});}
+export async function admitJobs(jobs:Job[],maxJobs=500,maxBytes=256*1024*1024):Promise<void>{
+ const db=await database();await new Promise<void>((resolve,reject)=>{const tx=db.transaction('jobs','readwrite');const store=tx.objectStore('jobs');const req=store.getAll();let reason:Error|null=null;
+ req.onsuccess=()=>{const current=req.result as Job[];if(current.length+jobs.length>maxJobs||current.filter(j=>!['done','cancelled'].includes(j.state)).reduce((n,j)=>n+j.size,0)+jobs.reduce((n,j)=>n+j.size,0)>maxBytes){reason=new Error('The capture queue is full. Clear completed items or finish uploads.');tx.abort();return;}for(const job of jobs)store.add(job);};tx.oncomplete=()=>resolve();tx.onabort=()=>reject(reason??tx.error);tx.onerror=()=>reject(tx.error);});
+}
+export async function rememberBatch(batch:CaptureBatch):Promise<void>{const old=await list<CaptureBatch>('batches');for(const item of old.sort((a,b)=>b.createdAt-a.createdAt).slice(4))await remove('batches',item.id);await save('batches',batch);}
+export function jobFor(asset:Asset,connectionId:string,parent:string|null,tags:string[],description:string):Job{return {id:crypto.randomUUID(),asset,connectionId,parent,tags,description,state:'queued',loaded:0,size:0,attempts:0,error:null,session:null,entry:null,updatedAt:Date.now(),createdAt:Date.now(),nextAttemptAt:0};}
+export async function readBlob(id:string):Promise<Blob|undefined>{return (await read<StoredBlob>('blobs',id))?.blob;}
+/** One bounded readonly transaction for a capture batch, never a queue scan. */
+export async function readMany<T>(store:string,ids:readonly string[]):Promise<(T|undefined)[]>{
+ if(ids.length>300)throw new Error('Too many capture jobs.');
+ const db=await database();return new Promise((resolve,reject)=>{const values:(T|undefined)[]=new Array(ids.length);const tx=db.transaction(store);const target=tx.objectStore(store);ids.forEach((id,index)=>{const request=target.get(id);request.onsuccess=()=>{values[index]=request.result as T|undefined;};});tx.oncomplete=()=>resolve(values);tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);});
+}

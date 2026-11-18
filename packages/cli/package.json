@@ -1,0 +1,10 @@
+{
+  "name": "@useflex/media-studio-cli",
+  "version": "0.1.0",
+  "description": "Import files and image conversions into FLEX Media Studio.",
+  "type": "module",
+  "bin": { "flex-studio": "./cli.mjs" },
+  "engines": { "node": ">=22" },
+  "files": ["cli.mjs", "studio-client.mjs", "import-plan.mjs", "image-size.mjs"],
+  "scripts": {"docs:download": "node build-docs-download.mjs"}
+}

@@ -61,19 +61,6 @@
 
 Use Studio as a media workspace, embed its React interface in your application, or connect it to **Filament**. FLEX Fields is an optional integration; the library and native Filament components work independently of it.
 
-## Free personally. Licensed commercially.
-
-Use Media Studio free for **personal, noncommercial projects, education and evaluation**. Commercial production—including internal business tools—requires a license.
-
-| Single Project | Unlimited | Business |
-| --- | --- | --- |
-| **$99 one time** | **$299 one time** | **$999 one time** |
-| One commercial application | Unlimited own and client projects | Unlimited + 12 months of priority product support |
-
-All plans include every feature, **12 months of updates** and **perpetual use of covered versions**. Prices are USD before applicable tax. Hosting, storage and third-party AI services are separate.
-
-**[Buy a commercial license](https://shop.bjanczak.com/checkout/buy/b087c01b-c85e-415a-af05-90690053c7d3)** · **[Compare plans](https://studio.bjanczak.com/licensing)** · **[License terms](LICENSE)**
-
 ## Find the file. Keep the momentum.
 
 Search names and tags, narrow by file type, or describe what you need with optional semantic search. Use the same search panel for your library workflow.
@@ -301,7 +288,6 @@ The in-app assistant, external MCP access and Boost's development skill serve di
 **Start with the [installation guide](https://studio.bjanczak.com/installation).** The source-available Composer package includes the Laravel integration, Media Core and matching prebuilt browser assets. No Node.js build is required to install it.
 
 ```bash
-composer config repositories.media-studio vcs https://github.com/janczakb/media-studio
 composer require useflex/media-studio:^0.1.0
 php artisan vendor:publish --tag=media-studio-config
 php artisan vendor:publish --tag=media-studio-migrations
@@ -412,5 +398,18 @@ If Studio fits your workflow, [star the repository](https://github.com/janczakb/
 Help sustain the development of Media Studio and the FLEX ecosystem through **[GitHub Sponsors](https://github.com/sponsors/janczakb)** or **[Buy Me a Coffee](https://buymeacoffee.com/janczakb)**.
 
 [Report an issue](https://github.com/janczakb/media-studio/issues) · [Discussions](https://github.com/janczakb/media-studio/discussions) · [Changelog](CHANGELOG.md) · [Support](SUPPORT.md) · [Contributing](CONTRIBUTING.md) · [Code of conduct](CODE_OF_CONDUCT.md) · [Security](SECURITY.md) · [Credits](CREDITS.md)
+
+## Free personally. Licensed commercially.
+
+Use Media Studio free for **personal, noncommercial projects, education and evaluation**. Commercial production—including internal business tools—requires a license.
+
+| Single Project | Unlimited | Business |
+| --- | --- | --- |
+| **$99 one time** | **$299 one time** | **$999 one time** |
+| One commercial application | Unlimited own and client projects | Unlimited + 12 months of priority product support |
+
+All plans include every feature, **12 months of updates** and **perpetual use of covered versions**. Prices are USD before applicable tax. Hosting, storage and third-party AI services are separate.
+
+**[Buy a commercial license](https://shop.bjanczak.com/checkout/buy/b087c01b-c85e-415a-af05-90690053c7d3)** · **[Compare plans](https://studio.bjanczak.com/licensing)** · **[License terms](LICENSE)**
 
 © 2026 Bartłomiej Janczak.

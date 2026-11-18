@@ -12,33 +12,53 @@
     "SECURITY.md",
     "SUPPORT.md",
     "VERSION",
-    "composer.json"
+    "composer.json",
+    "package-lock.json",
+    "package.json",
+    "phpunit.xml"
   ],
   "directories": [
     ".github",
     "art",
     "docs",
     "packages",
-    "resources"
+    "resources",
+    "scripts",
+    "tests"
   ],
   "package_prefixes": [
-    "packages/laravel/src/",
+    "packages/browser-extension/src/",
+    "packages/browser-extension/tests/",
+    "packages/cli/",
+    "packages/cloudflare-worker/src/",
     "packages/laravel/config/",
     "packages/laravel/database/",
     "packages/laravel/lang/",
-    "packages/laravel/routes/",
     "packages/laravel/resources/",
+    "packages/laravel/routes/",
+    "packages/laravel/src/",
     "packages/media-core/src/",
-    "packages/react/dist/"
+    "packages/media-core/tests/",
+    "packages/react/dist/",
+    "packages/react/src/",
+    "packages/react/styles/"
   ],
   "package_files": [
-    "packages/laravel/composer.json",
+    "packages/browser-extension/README.md",
+    "packages/browser-extension/build.mjs",
+    "packages/browser-extension/package-lock.json",
+    "packages/browser-extension/package.json",
+    "packages/browser-extension/tsconfig.json",
+    "packages/cloudflare-worker/package.json",
+    "packages/cloudflare-worker/wrangler.example.toml",
     "packages/laravel/.gitattributes",
-    "packages/laravel/LICENSE",
     "packages/laravel/COMMERCIAL.md",
-    "packages/media-core/composer.json",
+    "packages/laravel/LICENSE",
+    "packages/laravel/composer.json",
     "packages/media-core/.gitattributes",
+    "packages/media-core/COMMERCIAL.md",
     "packages/media-core/LICENSE",
-    "packages/media-core/COMMERCIAL.md"
+    "packages/media-core/composer.json",
+    "packages/media-core/phpunit.xml"
   ]
 }
