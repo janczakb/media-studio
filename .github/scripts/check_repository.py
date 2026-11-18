@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the public overview and its distribution boundaries, without dependencies."""
+"""Validate published content and its distribution boundaries, without dependencies."""
 from __future__ import annotations
 
 import re
@@ -148,7 +148,7 @@ def check_archive() -> None:
         require("README.md" in names, "The repository archive must keep its README")
         for name in names:
             require(name.split("/", 1)[0] not in forbidden, f"Repository material leaked into archive: {name}")
-        # Exercise the policy even while package source is intentionally unpublished.
+        # Exercise runtime preservation and development exclusions with an isolated fixture.
         fixture = temporary / "fixture"
         fixture.mkdir()
         (fixture / ".gitattributes").write_bytes((ROOT / ".gitattributes").read_bytes())
