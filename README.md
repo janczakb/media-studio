@@ -62,34 +62,79 @@
 
 Use Studio as a media workspace, embed its React interface in your application, or connect it to **Filament**. FLEX Fields is an optional integration; the library and native Filament components work independently of it.
 
-## See what you can build
+## Find the file. Keep the momentum.
+
+Search names and tags, narrow by file type, or describe what you need with optional semantic search. Use the same search panel for your library workflow.
+
+<p align="center">
+  <a href="https://studio.bjanczak.com/semantic-search"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/semantic-search.webp" width="100%" alt="Meaning-based Studio search with photo and document results, captured from the documentation homepage"></a>
+</p>
+
+## Describe the task. Let Studio help.
+
+Find the right file without reproducing its exact name. The optional assistant works with authorized workspace context to rename, move, tag and discuss assets.
+
+<p align="center">
+  <a href="https://studio.bjanczak.com/assistant"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/ai-actions.webp" width="100%" alt="Studio AI actions showing a natural-language request and the matching library context"></a>
+</p>
+
+## A place for every file and every team
+
+Keep reusable tags, folder navigation, visual feedback and workspace access together. Give each team a clear place to collect, review and reuse its media.
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <a href="https://studio.bjanczak.com/filament"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/previews/filament.webp" width="100%" alt="Media Studio integrated with a native Filament rich editor"></a>
-      <p><strong>Your library, inside your forms</strong><br>Choose existing assets, upload to an approved destination and reuse images in editor content.</p>
-      <p><a href="https://studio.bjanczak.com/filament">Explore Filament integration →</a></p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://studio.bjanczak.com/ai"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/previews/ai-analysis.webp" width="100%" alt="Studio visual analysis showing suggested tags and an image description"></a>
-      <p><strong>Make visual content easier to discover</strong><br>Enable AI labels, descriptions and OCR, then connect the information to your search workflow.</p>
-      <p><a href="https://studio.bjanczak.com/ai">Explore AI capabilities →</a></p>
-    </td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/tags"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/tags.webp" width="100%" alt="Reusable tags with search and suggestions"></a></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/folder-navigation"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/folders.webp" width="100%" alt="Lazy folder navigation and contextual selection"></a></td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
-      <a href="https://studio.bjanczak.com/browser-extension"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/previews/browser-extension.webp" width="100%" alt="Studio browser extension with batch save and screenshot capture actions"></a>
-      <p><strong>Capture inspiration while you browse</strong><br>Save images, collect a batch or capture part of a page into an authorized Studio workspace.</p>
-      <p><a href="https://studio.bjanczak.com/browser-extension">Explore the browser extension →</a></p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://studio.bjanczak.com/sharing"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/previews/sharing.webp" width="100%" alt="Studio sharing controls for passwords, expiration and download access"></a>
-      <p><strong>Share on your terms</strong><br>Control link passwords, expiration and download access while keeping workspace permissions in place.</p>
-      <p><a href="https://studio.bjanczak.com/sharing">Explore sharing →</a></p>
-    </td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/image-preview-sdk"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/annotations.webp" width="100%" alt="Image annotations with arrows, shapes and text"></a></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/ai-image-labels"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/ai-tagging.webp" width="100%" alt="Optional AI tagging and image descriptions"></a></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/members"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/team-workspaces.webp" width="100%" alt="Team workspace members and access levels"></a></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/sharing"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/share-controls.webp" width="100%" alt="Share passwords, expiration and download controls"></a></td>
   </tr>
 </table>
+
+## Save inspiration while you browse
+
+FLEX Capture connects Chrome and Firefox to your Studio workspace. Open the extension, drag an image, collect a batch, capture a region or use the context menu.
+
+<p align="center">
+  <a href="https://studio.bjanczak.com/browser-extension"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/browser-menu-poster.webp"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/browser-menu.webp" width="100%" alt="Animated preview: opening the FLEX Capture menu over a wildlife photo collection"></picture></a>
+</p>
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/browser-extension/capture"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/drag-drop-poster.webp"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/drag-drop.webp" width="100%" alt="Animated FLEX Capture Drag &amp; Drop demonstration"></picture></a><p><strong>Drag &amp; Drop</strong><br>Drag an image into the capture panel and choose its destination.</p></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/browser-extension/capture"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/batch-save-poster.webp"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/batch-save.webp" width="100%" alt="Animated FLEX Capture Batch save demonstration"></picture></a><p><strong>Batch save</strong><br>Select the images you need, choose a folder and add tags before saving.</p></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/browser-extension/capture"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/screenshot-poster.webp"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/screenshot.webp" width="100%" alt="Animated FLEX Capture Screenshot demonstration"></picture></a><p><strong>Screenshot</strong><br>Draw a selection around the region you want to capture.</p></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/browser-extension/capture"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/right-click-poster.webp"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/right-click.webp" width="100%" alt="Animated FLEX Capture Right Click demonstration"></picture></a><p><strong>Right Click</strong><br>Save an image through its context menu, or use Alt + right-click.</p></td>
+  </tr>
+</table>
+
+Animations demonstrate the capture workflow using sample media; they do not represent a live transfer from your account. Optional extension setup and workspace permissions still apply.
+
+The extension connects to your installation through an approved, scoped connection. Its file intake uses Studio’s authorized upload workflow and server limits.
+
+[Install FLEX Capture](https://studio.bjanczak.com/browser-extension/install) · [Explore capture workflows](https://studio.bjanczak.com/browser-extension/capture)
+
+## From first upload to final delivery
+
+Bring Studio into your Filament editor and prepare video clips without leaving the media workflow.
+
+<table>
+  <tr>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/filament-rich-editor"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/filament-editor.webp" width="100%" alt="Native Filament RichEditor with an image inserted from Studio"></a></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/video-editing"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/video-trimming.webp" width="100%" alt="Studio video editor with filmstrip, trim interval and save controls"></a></td>
+  </tr>
+</table>
+
+<details>
+<summary><strong>Explore the complete feature catalog</strong></summary>
 
 ## Media library features at a glance
 
@@ -122,6 +167,8 @@ Capabilities follow the installation's configuration, supported file formats and
 
 [Library organization](https://studio.bjanczak.com/library-organization) · [Upload workflows](https://studio.bjanczak.com/uploads) · [Keyboard and clipboard](https://studio.bjanczak.com/keyboard-shortcuts) · [Languages and RTL](https://studio.bjanczak.com/localization)
 
+</details>
+
 ## Filament components
 
 Bring the same media library into fields, editor attachments, tables, record details and actions. Configure accepted types, selection counts, upload destinations and browse scope in PHP.
@@ -136,6 +183,9 @@ Bring the same media library into fields, editor attachments, tables, record det
 | **[MarkdownEditor](https://studio.bjanczak.com/filament-markdown-editor)** | Choose authorized images for Markdown content. |
 | **[StudioPicker and actions](https://studio.bjanczak.com/filament-actions)** | Build an application-specific selection action around the Studio modal. |
 | **[FLEX Fields](https://studio.bjanczak.com/flex-fields)** | Keep the FLEX upload and FlexRichEditor experience while connecting to Studio storage and references. |
+
+<details>
+<summary><strong>PHP examples: select existing images and upload to a fixed folder</strong></summary>
 
 ### Choose images from an approved library
 
@@ -185,6 +235,8 @@ Workspace permissions, accepted file policies and server limits still apply. Sel
 
 [Filament setup](https://studio.bjanczak.com/filament-setup) · [All configuration options](https://studio.bjanczak.com/filament-configuration) · [Tenancy](https://studio.bjanczak.com/filament-tenancy) · [FLEX Fields integration](https://studio.bjanczak.com/flex-fields)
 
+</details>
+
 ## AI that works with your library
 
 Describe the asset or the task instead of reproducing an exact filename. Enable the capabilities your workflow needs; they have independent configuration, processing and access checks.
@@ -219,16 +271,6 @@ Conversions and specialized previews depend on enabled processors, supported for
 
 [Storage](https://studio.bjanczak.com/storage-s3) · [Image conversions](https://studio.bjanczak.com/image-conversions) · [Document thumbnails](https://studio.bjanczak.com/document-thumbnails) · [CDN delivery](https://studio.bjanczak.com/cdn-delivery) · [Encryption](https://studio.bjanczak.com/encryption)
 
-## Capture from the browser. Keep working in Studio.
-
-Save a single image, collect a batch, capture a selected area, or save a page bookmark. Choose the workspace, destination folder and tags in the extension's capture workflow.
-
-Capture includes selected-area, visible-page and full-page screenshots, right-click saving and the Alt + right-click shortcut.
-
-The extension connects to your installation through an approved, scoped connection. It supports Chrome and Firefox builds. Its file intake uses Studio's authorized upload workflow; browser capture does not bypass storage limits or workspace policy.
-
-[Install and connect](https://studio.bjanczak.com/browser-extension/install) · [Capture options](https://studio.bjanczak.com/browser-extension/capture) · [Transfers and limits](https://studio.bjanczak.com/browser-extension/transfers)
-
 ## Connect your application and your AI tools
 
 | Integration | Where to start |
@@ -256,6 +298,9 @@ The Laravel package declares **PHP 8.3+** and **Laravel 12 or 13**. The interfac
 
 [Installation](https://studio.bjanczak.com/installation) · [Configuration](https://studio.bjanczak.com/configuration) · [Filament setup](https://studio.bjanczak.com/filament-setup) · [Operations](https://studio.bjanczak.com/operations)
 
+<details>
+<summary><strong>Find the right integration for your application</strong></summary>
+
 ## Find the solution your application needs
 
 | You are building… | Start with… |
@@ -267,6 +312,8 @@ The Laravel package declares **PHP 8.3+** and **Laravel 12 or 13**. The interfac
 | An existing media collection | [Spatie Media Library](https://studio.bjanczak.com/spatie-media-library) or [indexed disk sources](https://studio.bjanczak.com/existing-disk-sources). |
 | A team capture workflow | [Browser extension](https://studio.bjanczak.com/browser-extension), [members](https://studio.bjanczak.com/members) and [comments](https://studio.bjanczak.com/comments). |
 | Automated imports and external tools | [CLI](https://studio.bjanczak.com/cli), [REST API](https://studio.bjanczak.com/api/introduction) and [MCP](https://studio.bjanczak.com/mcp). |
+
+</details>
 
 ## Questions before you integrate
 

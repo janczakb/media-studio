@@ -6,6 +6,9 @@ Changes to the public Media Studio presentation and repository tooling are recor
 
 ### Product presentation
 
+- Added feature cards captured from the documentation homepage and five animated extension demonstrations with static motion alternatives.
+- Reorganized technical catalogs and PHP examples into expandable sections.
+
 - Introduced the Media Studio overview with the approved product artwork, feature catalog and Filament examples.
 - Added links to the documentation at https://studio.bjanczak.com/.
 - Added presentation credits and community guidance.

@@ -171,3 +171,7 @@ SOFTWARE.
 ## Distribution notices
 
 When distributing an actual software build, preserve its third-party license and notice files, including notices shipped with browser chunks, preview workers and copied assets. This overview file does not replace notices required by any distributed dependency.
+
+## README feature cards and motion previews
+
+The README feature cards are captures of the Media Studio documentation homepage. Capture animations reuse the project's original extension demonstrations, re-encoded for the README. They contain demonstration media and simulated transfer responses; they are not evidence of live uploads from a reader's account. Cursor movement and browser framing are presentation layers. The motion previews use the Pexels photographs credited above.

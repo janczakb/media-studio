@@ -100,6 +100,13 @@ def check_artwork() -> None:
     for path in (ROOT / "art").rglob("*.webp"):
         width, height = webp_dimensions(path)
         require(width > 0 and height > 0, f"Empty image: {path}")
+    for path in (ROOT / "art/motion").glob("*.webp"):
+        require(path.stat().st_size <= 2500000, f"Motion preview exceeds 2.5 MB budget: {path}")
+        if not path.stem.endswith("-poster"):
+            require(path.with_name(path.stem + "-poster.webp").is_file(), f"Missing static motion alternative: {path}")
+            with path.open("rb") as stream:
+                header = stream.read(21)
+            require(header[12:16] == b"VP8X" and bool(header[20] & 2), f"Preview must be animated WebP: {path}")
     width, height = webp_dimensions(ROOT / "art/media-studio-product.webp")
     require(width >= 2560 and width * 9 == height * 16, "Hero must be at least 2560px and 16:9")
     for path in (ROOT / "art").rglob("*.svg"):
