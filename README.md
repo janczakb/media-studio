@@ -44,10 +44,6 @@
   </a>
 </p>
 
-<p align="center">
-  <sub>This repository is the public product overview. Package source and installable builds are not included here.</sub>
-</p>
-
 ## Why choose Media Studio?
 
 | What makes Studio worth choosing | What it gives your application |

@@ -12,4 +12,4 @@ The maintainer will review the report and coordinate next steps through the priv
 
 Reports about Media Studio, its published repository tooling and documented integrations are welcome. Vulnerabilities in a third-party service should also be reported to that provider through its own security process.
 
-This repository is currently a product overview rather than a package distribution. A passing repository workflow is not an audit of package code that is not present here. Supported release and security-update policies will be stated alongside the software distribution.
+Report the affected package version and include a minimal reproduction against the published source. Never include production credentials or private customer data.

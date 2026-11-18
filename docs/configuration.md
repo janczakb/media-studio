@@ -4,8 +4,7 @@ title: "Configure FLEX Media Studio"
 
 Media Studio runs as a Laravel media library with an embeddable React interface.
 Spatie Laravel Permission v8 is a required dependency. Filament, FLEX Fields,
-Spatie Media Library v11 and a read-only tag mapping for external sources are optional integrations. This
-checkout is currently a development preview; it has not been published as a release.
+Spatie Media Library v11 and a read-only tag mapping for external sources are optional integrations.
 
 | Configure | Guide |
 | --- | --- |

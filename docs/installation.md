@@ -11,7 +11,7 @@ Personal noncommercial use and evaluation are free. For business production, [pu
 
 ## Add the package
 
-The public source-available distribution contains the Laravel integration, Media Core and prebuilt browser assets. Install it from the public Composer registry after the Packagist listing has been submitted:
+The public source-available distribution contains the Laravel integration, Media Core and prebuilt browser assets. Install [useflex/media-studio from Packagist](https://packagist.org/packages/useflex/media-studio):
 
 ```bash
 composer require useflex/media-studio:^0.1.0
@@ -22,8 +22,6 @@ php artisan migrate
 ```
 
 No license key, private Composer repository or runtime activation is required to download or install the public package. A commercial license grants the legal right to business production use.
-
-If Packagist has not indexed the package yet, register `https://github.com/janczakb/media-studio` as a VCS repository in your application, then run the same require command.
 
 Check the package's Composer constraints against your host PHP and Laravel versions. Register the authenticatable classes that represent the users of Studio. Use a [private local disk](/storage-local) or [private S3 disk](/storage-s3) for managed originals.
 
