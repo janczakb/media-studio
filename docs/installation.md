@@ -35,6 +35,30 @@ Check the package's Composer constraints against your host PHP and Laravel versi
 ],
 ```
 
+## Install using your commercial license key
+
+The license server also offers a Composer repository for paid purchases. Use this instead of the GitHub VCS repository when you want the server to return releases covered by your update entitlement:
+
+```bash
+composer config repositories.media-studio composer https://license.bjanczak.com/v1/media-studio/composer
+composer require useflex/media-studio:^0.1.0
+```
+
+Provide HTTP Basic credentials through your deployment secret manager using Composer's `COMPOSER_AUTH` environment variable. The username is `license`; the password is your purchased license key. The JSON structure is:
+
+```json
+{
+  "http-basic": {
+    "license.bjanczak.com": {
+      "username": "license",
+      "password": "YOUR_LICENSE_KEY"
+    }
+  }
+}
+```
+
+Do not commit this value or paste it into public logs. Downloads do not count as domain activations. The public source remains available for eligible personal use and evaluation; a public download does not grant commercial production rights. The commercial repository filters new releases by the purchased update window and preserves covered archived releases after expiry.
+
 ## Pick an interface
 
 | Interface | Follow this guide |
