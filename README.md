@@ -1,20 +1,20 @@
 <p align="center" class="filament-hidden">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="art/readme/logo-dark.svg">
-    <img src="art/readme/logo-light.svg" alt="FLEX Media Studio" width="290" height="60">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/readme/logo-dark.svg">
+    <img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/readme/logo-light.svg" alt="FLEX Media Studio" width="290" height="60">
   </picture>
 </p>
 
-<h1 align="center">FLEX Media Studio<br>Your media. One Studio.</h1>
+<h1 align="center">FLEX Media Studio<br>Media library for Laravel &amp; Filament</h1>
 
 <p align="center">
-  <strong>A self-hosted media workspace for Laravel. At home in Filament.</strong>
+  <strong>Your media. Your infrastructure. One connected workflow.</strong>
 </p>
 
 <p align="center">
-  Bring images, videos and documents into one searchable library.<br>
-  Organize with your team, preview and edit assets, and reuse them across your application.<br>
-  Add contextual AI, browser capture and your own storage — on your terms.
+  Self-hosted digital asset management for your Laravel application and Filament panel.<br>
+  Capture, organize and find images, videos and documents — then reuse them across forms and editors.<br>
+  Connect your storage, collaborate with your team and add AI where it makes work easier.
 </p>
 
 <p align="center">
@@ -26,19 +26,20 @@
 </p>
 
 <p align="center">
-  <a href="https://studio.bjanczak.com/"><img src="art/readme/documentation.svg" width="160" height="46" alt="Read the documentation"></a>&nbsp;
-  <a href="https://studio.bjanczak.com/filament"><img src="art/readme/filament.svg" width="176" height="46" alt="Explore Filament integration"></a>
+  <a href="https://studio.bjanczak.com/"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/readme/documentation.svg" width="210" height="48" alt="Read the Media Studio documentation"></a>&nbsp;&nbsp;
+  <a href="https://studio.bjanczak.com/filament"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/readme/filament-dark.svg"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/readme/filament.svg" width="210" height="48" alt="Explore Filament components"></picture></a>
 </p>
 
 <p align="center">
   <a href="#why-choose-media-studio"><strong>Why Studio?</strong></a> &nbsp;·&nbsp;
+  <a href="#media-library-features-at-a-glance"><strong>Feature catalog</strong></a> &nbsp;·&nbsp;
   <a href="#filament-components"><strong>Filament components</strong></a> &nbsp;·&nbsp;
   <a href="#getting-started"><strong>Getting started</strong></a>
 </p>
 
 <p align="center" class="filament-hidden">
   <a href="https://studio.bjanczak.com/">
-    <img src="art/media-studio-product.webp" width="100%" alt="FLEX Media Studio: a shared media library, semantic search, contextual AI, private storage, Filament integration, browser capture, sharing and image editing">
+    <img class="filament-hidden" src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/media-studio-product.webp" width="100%" alt="FLEX Media Studio: a shared media library, semantic search, contextual AI, private storage, Filament integration, browser capture, sharing and image editing">
   </a>
 </p>
 
@@ -64,29 +65,60 @@ Use Studio as a media workspace, embed its React interface in your application, 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://studio.bjanczak.com/filament"><img src="art/previews/filament.webp" width="100%" alt="Media Studio integrated with a native Filament rich editor"></a>
+      <a href="https://studio.bjanczak.com/filament"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/previews/filament.webp" width="100%" alt="Media Studio integrated with a native Filament rich editor"></a>
       <p><strong>Your library, inside your forms</strong><br>Choose existing assets, upload to an approved destination and reuse images in editor content.</p>
       <p><a href="https://studio.bjanczak.com/filament">Explore Filament integration →</a></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://studio.bjanczak.com/ai"><img src="art/previews/ai-analysis.webp" width="100%" alt="Studio visual analysis showing suggested tags and an image description"></a>
+      <a href="https://studio.bjanczak.com/ai"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/previews/ai-analysis.webp" width="100%" alt="Studio visual analysis showing suggested tags and an image description"></a>
       <p><strong>Make visual content easier to discover</strong><br>Enable AI labels, descriptions and OCR, then connect the information to your search workflow.</p>
       <p><a href="https://studio.bjanczak.com/ai">Explore AI capabilities →</a></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://studio.bjanczak.com/browser-extension"><img src="art/previews/browser-extension.webp" width="100%" alt="Studio browser extension with batch save and screenshot capture actions"></a>
+      <a href="https://studio.bjanczak.com/browser-extension"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/previews/browser-extension.webp" width="100%" alt="Studio browser extension with batch save and screenshot capture actions"></a>
       <p><strong>Capture inspiration while you browse</strong><br>Save images, collect a batch or capture part of a page into an authorized Studio workspace.</p>
       <p><a href="https://studio.bjanczak.com/browser-extension">Explore the browser extension →</a></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://studio.bjanczak.com/sharing"><img src="art/previews/sharing.webp" width="100%" alt="Studio sharing controls for passwords, expiration and download access"></a>
+      <a href="https://studio.bjanczak.com/sharing"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/previews/sharing.webp" width="100%" alt="Studio sharing controls for passwords, expiration and download access"></a>
       <p><strong>Share on your terms</strong><br>Control link passwords, expiration and download access while keeping workspace permissions in place.</p>
       <p><a href="https://studio.bjanczak.com/sharing">Explore sharing →</a></p>
     </td>
   </tr>
 </table>
+
+## Media library features at a glance
+
+From the first upload to the files reused in your application, Studio connects the everyday details of a media workflow.
+
+| Area | What you can do |
+| --- | --- |
+| **Folders and navigation** | Browse nested folders with cursor pagination, a virtualized sidebar, contextual breadcrumbs and direct folder links. |
+| **Tags and discovery** | Add or remove manual tags with live suggestions, filter by tag language, and combine file type, extension, uploader, date and size filters. |
+| **Photos and favorites** | Review images and videos in a date-grouped timeline, adjust thumbnail density and aspect ratio, and revisit favorites or recently opened files. |
+| **File information and notes** | Maintain alternative text and captions, create rich notes, and collect web bookmarks through the browser extension. |
+| **File and folder uploads** | Add individual files or folder hierarchies, monitor progress, pause/resume supported transfers and retry failures. |
+| **Large-file intake** | Enable resumable upload sessions or direct S3 multipart uploads with server-defined limits and short-lived signed parts. |
+| **Preview and editing** | Inspect supported images, PDF and Office documents, play audio/video, annotate images and trim eligible videos. |
+| **Image processing** | Define named thumbnail and preview conversions, including AVIF, and choose the ready preset used by supported picker/upload fields. |
+| **Team review** | Invite members, assign workspace roles, comment on files, mention teammates and receive configured in-app or desktop notifications. |
+| **Sharing and collection** | Protect links with passwords and expiry, control downloads, and optionally accept guest uploads into a shared folder. |
+| **Share analytics** | Enable per-link visit and duration reporting, with country breakdowns when trusted location data is configured. |
+| **Bulk work and archives** | Move, trash or restore selections, and offer authorized ZIP collection downloads or optional background archive preparation. |
+| **Versions and Trash** | Publish selected image edits explicitly, configure replacement/version retention, restore deleted entries and enable scheduled Trash cleanup. |
+| **Keyboard and clipboard** | Record your own Mac/Windows shortcut bindings and paste supported clipboard files into the open folder through the normal upload pipeline. |
+| **Authentication and tenancy** | Reuse host authentication and tenant context, or configure optional standalone accounts with email verification and two-factor authentication. |
+| **Language and presentation** | Use light/dark themes, English/Polish catalogs, application-provided translations, RTL support, branding and timezone preferences. |
+| **Tenants and access** | Scope workspaces to tenants, reuse host authentication and enforce operation permissions with Spatie Laravel Permission 8. |
+| **Existing libraries** | Index configured disk sources or connect Spatie Media Library models, collections and conversions. |
+| **Private delivery and exports** | Use local or S3-compatible storage, configured CDN profiles and background archive downloads. |
+| **Standalone or embedded** | Use your application's login, embed the React interface, or configure optional standalone accounts with email verification and two-factor authentication. |
+
+Capabilities follow the installation's configuration, supported file formats and the current user's permissions. Optional services and processors are enabled separately.
+
+[Library organization](https://studio.bjanczak.com/library-organization) · [Upload workflows](https://studio.bjanczak.com/uploads) · [Keyboard and clipboard](https://studio.bjanczak.com/keyboard-shortcuts) · [Languages and RTL](https://studio.bjanczak.com/localization)
 
 ## Filament components
 
@@ -159,6 +191,7 @@ Describe the asset or the task instead of reproducing an exact filename. Enable 
 | --- | --- |
 | **[Contextual assistant](https://studio.bjanczak.com/assistant)** | Conversations with authorized file context and supported actions such as finding, tagging and organizing assets. |
 | **[AI labels and descriptions](https://studio.bjanczak.com/ai-image-labels)** | Visual analysis with reviewable suggestions, separate from manually managed tags. |
+| **[Video analysis](https://studio.bjanczak.com/ai/video-analysis)** | Analyze a bounded set of sampled video frames and retain timecoded results. |
 | **[OCR](https://studio.bjanczak.com/ai/ocr)** | Text extraction from images and scanned PDF pages using the configured OCR service. |
 | **[Semantic and hybrid search](https://studio.bjanczak.com/semantic-search)** | Meaning-based retrieval through Meilisearch's configured embedder. |
 | **[AI image editing](https://studio.bjanczak.com/ai/image-editing)** | Generate candidates, review the results and explicitly choose which version to publish. |
@@ -167,7 +200,7 @@ Chat, visual analysis, OCR and embeddings can use different providers. Enabling 
 
 [AI setup](https://studio.bjanczak.com/ai/setup) · [Providers](https://studio.bjanczak.com/ai/providers) · [Limits and operations](https://studio.bjanczak.com/ai/operations)
 
-## Store once. Process for the places you use it.
+## Storage, image conversions and private media delivery
 
 Keep originals on a configured Laravel disk. Generate the image conversions your interface needs, deliver them through the configured storage or CDN, and reuse asset identity across the application.
 
@@ -187,6 +220,8 @@ Conversions and specialized previews depend on enabled processors, supported for
 ## Capture from the browser. Keep working in Studio.
 
 Save a single image, collect a batch, capture a selected area, or save a page bookmark. Choose the workspace, destination folder and tags in the extension's capture workflow.
+
+Capture includes selected-area, visible-page and full-page screenshots, right-click saving and the Alt + right-click shortcut.
 
 The extension connects to your installation through an approved, scoped connection. It supports Chrome and Firefox builds. Its file intake uses Studio's authorized upload workflow; browser capture does not bypass storage limits or workspace policy.
 
