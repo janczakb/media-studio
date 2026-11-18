@@ -28,7 +28,7 @@
 </p>
 
 <p align="center">
-  <a href="https://studio.bjanczak.com/"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/readme/documentation.svg" width="210" height="48" alt="Read the Media Studio documentation"></a>&nbsp;&nbsp;
+  <a href="https://studio.bjanczak.com/"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/readme/documentation.svg?v=3" width="210" height="48" alt="Read the Media Studio documentation"></a>&nbsp;&nbsp;
   <a href="https://studio.bjanczak.com/filament"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/readme/filament-dark.svg"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/readme/filament.svg" width="210" height="48" alt="Explore Filament components"></picture></a>
 </p>
 
