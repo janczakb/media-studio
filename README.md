@@ -18,7 +18,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/janczakb/media-studio/actions/workflows/repository-checks.yml"><img src="https://github.com/janczakb/media-studio/actions/workflows/repository-checks.yml/badge.svg" alt="Repository checks"></a>
   <a href="https://github.com/sponsors/janczakb"><img src="https://img.shields.io/badge/GitHub-Sponsors-EA4AAA?style=flat-square&amp;logo=githubsponsors&amp;logoColor=white" alt="Sponsor Media Studio development"></a>
   <a href="https://github.com/janczakb/media-studio/stargazers"><img src="https://img.shields.io/github/stars/janczakb/media-studio.svg?style=flat-square&amp;color=EAB308&amp;label=GitHub%20stars" alt="GitHub stars"></a>
   <img src="https://img.shields.io/badge/PHP-8.3%2B-777BB4?style=flat-square" alt="PHP 8.3 or later">
@@ -41,7 +40,7 @@
 
 <p align="center" class="filament-hidden">
   <a href="https://studio.bjanczak.com/">
-    <img class="filament-hidden" src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/media-studio-product.webp" width="100%" alt="FLEX Media Studio: a shared media library, semantic search, contextual AI, private storage, Filament integration, browser capture, sharing and image editing">
+    <img class="filament-hidden" src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/media-studio-product.webp?v=rounded-1" width="100%" alt="FLEX Media Studio: a shared media library, semantic search, contextual AI, private storage, Filament integration, browser capture, sharing and image editing">
   </a>
 </p>
 
@@ -67,7 +66,7 @@ Use Studio as a media workspace, embed its React interface in your application, 
 Search names and tags, narrow by file type, or describe what you need with optional semantic search. Use the same search panel for your library workflow.
 
 <p align="center">
-  <a href="https://studio.bjanczak.com/semantic-search"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/semantic-search.webp" width="100%" alt="Meaning-based Studio search with photo and document results, captured from the documentation homepage"></a>
+  <a href="https://studio.bjanczak.com/semantic-search"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/semantic-search.webp?v=rounded-1" width="100%" alt="Meaning-based Studio search with photo and document results, captured from the documentation homepage"></a>
 </p>
 
 ## Describe the task. Let Studio help.
@@ -75,7 +74,7 @@ Search names and tags, narrow by file type, or describe what you need with optio
 Find the right file without reproducing its exact name. The optional assistant works with authorized workspace context to rename, move, tag and discuss assets.
 
 <p align="center">
-  <a href="https://studio.bjanczak.com/assistant"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/ai-actions.webp" width="100%" alt="Studio AI actions showing a natural-language request and the matching library context"></a>
+  <a href="https://studio.bjanczak.com/assistant"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/ai-actions.webp?v=rounded-1" width="100%" alt="Studio AI actions showing a natural-language request and the matching library context"></a>
 </p>
 
 ## A place for every file and every team
@@ -84,16 +83,16 @@ Keep reusable tags, folder navigation, visual feedback and workspace access toge
 
 <table>
   <tr>
-    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/tags"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/tags.webp" width="100%" alt="Reusable tags with search and suggestions"></a></td>
-    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/folder-navigation"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/folders.webp" width="100%" alt="Lazy folder navigation and contextual selection"></a></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/tags"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/tags.webp?v=rounded-1" width="100%" alt="Reusable tags with search and suggestions"></a></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/folder-navigation"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/folders.webp?v=rounded-1" width="100%" alt="Lazy folder navigation and contextual selection"></a></td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/image-preview-sdk"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/annotations.webp" width="100%" alt="Image annotations with arrows, shapes and text"></a></td>
-    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/ai-image-labels"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/ai-tagging.webp" width="100%" alt="Optional AI tagging and image descriptions"></a></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/image-preview-sdk"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/annotations.webp?v=rounded-1" width="100%" alt="Image annotations with arrows, shapes and text"></a></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/ai-image-labels"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/ai-tagging.webp?v=rounded-1" width="100%" alt="Optional AI tagging and image descriptions"></a></td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/members"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/team-workspaces.webp" width="100%" alt="Team workspace members and access levels"></a></td>
-    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/sharing"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/share-controls.webp" width="100%" alt="Share passwords, expiration and download controls"></a></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/members"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/team-workspaces.webp?v=rounded-1" width="100%" alt="Team workspace members and access levels"></a></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/sharing"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/share-controls.webp?v=rounded-1" width="100%" alt="Share passwords, expiration and download controls"></a></td>
   </tr>
 </table>
 
@@ -102,17 +101,17 @@ Keep reusable tags, folder navigation, visual feedback and workspace access toge
 FLEX Capture connects Chrome and Firefox to your Studio workspace. Open the extension, drag an image, collect a batch, capture a region or use the context menu.
 
 <p align="center">
-  <a href="https://studio.bjanczak.com/browser-extension"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/browser-menu-poster.webp"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/browser-menu.webp" width="100%" alt="Animated preview: opening the FLEX Capture menu over a wildlife photo collection"></picture></a>
+  <a href="https://studio.bjanczak.com/browser-extension"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/browser-menu-poster.webp?v=rounded-1"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/browser-menu.webp?v=rounded-1" width="100%" alt="Animated preview: opening the FLEX Capture menu over a wildlife photo collection"></picture></a>
 </p>
 
 <table>
   <tr>
-    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/browser-extension/capture"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/drag-drop-poster.webp"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/drag-drop.webp" width="100%" alt="Animated FLEX Capture Drag &amp; Drop demonstration"></picture></a><p><strong>Drag &amp; Drop</strong><br>Drag an image into the capture panel and choose its destination.</p></td>
-    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/browser-extension/capture"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/batch-save-poster.webp"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/batch-save.webp" width="100%" alt="Animated FLEX Capture Batch save demonstration"></picture></a><p><strong>Batch save</strong><br>Select the images you need, choose a folder and add tags before saving.</p></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/browser-extension/capture"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/drag-drop-poster.webp?v=rounded-1"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/drag-drop.webp?v=rounded-1" width="100%" alt="Animated FLEX Capture Drag &amp; Drop demonstration"></picture></a><p><strong>Drag &amp; Drop</strong><br>Drag an image into the capture panel and choose its destination.</p></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/browser-extension/capture"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/batch-save-poster.webp?v=rounded-1"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/batch-save.webp?v=rounded-1" width="100%" alt="Animated FLEX Capture Batch save demonstration"></picture></a><p><strong>Batch save</strong><br>Select the images you need, choose a folder and add tags before saving.</p></td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/browser-extension/capture"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/screenshot-poster.webp"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/screenshot.webp" width="100%" alt="Animated FLEX Capture Screenshot demonstration"></picture></a><p><strong>Screenshot</strong><br>Draw a selection around the region you want to capture.</p></td>
-    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/browser-extension/capture"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/right-click-poster.webp"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/right-click.webp" width="100%" alt="Animated FLEX Capture Right Click demonstration"></picture></a><p><strong>Right Click</strong><br>Save an image through its context menu, or use Alt + right-click.</p></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/browser-extension/capture"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/screenshot-poster.webp?v=rounded-1"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/screenshot.webp?v=rounded-1" width="100%" alt="Animated FLEX Capture Screenshot demonstration"></picture></a><p><strong>Screenshot</strong><br>Draw a selection around the region you want to capture.</p></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/browser-extension/capture"><picture><source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/right-click-poster.webp?v=rounded-1"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/motion/right-click.webp?v=rounded-1" width="100%" alt="Animated FLEX Capture Right Click demonstration"></picture></a><p><strong>Right Click</strong><br>Save an image through its context menu, or use Alt + right-click.</p></td>
   </tr>
 </table>
 
@@ -128,8 +127,8 @@ Bring Studio into your Filament editor and prepare video clips without leaving t
 
 <table>
   <tr>
-    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/filament-rich-editor"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/filament-editor.webp" width="100%" alt="Native Filament RichEditor with an image inserted from Studio"></a></td>
-    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/video-editing"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/video-trimming.webp" width="100%" alt="Studio video editor with filmstrip, trim interval and save controls"></a></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/filament-rich-editor"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/filament-editor.webp?v=rounded-1" width="100%" alt="Native Filament RichEditor with an image inserted from Studio"></a></td>
+    <td width="50%" valign="top"><a href="https://studio.bjanczak.com/video-editing"><img src="https://raw.githubusercontent.com/janczakb/media-studio/main/art/sections/video-trimming.webp?v=rounded-1" width="100%" alt="Studio video editor with filmstrip, trim interval and save controls"></a></td>
   </tr>
 </table>
 

@@ -52,7 +52,7 @@ class Readme(HTMLParser):
             value = attributes.get(key)
             if value:
                 self.assets.append(value)
-        if tag == "img" and (attributes.get("src") or "").endswith("/media-studio-product.webp"):
+        if tag == "img" and urlsplit(attributes.get("src") or "").path.endswith("/media-studio-product.webp"):
             self.hero_hidden = "filament-hidden" in (attributes.get("class") or "").split()
 
 

@@ -6,6 +6,8 @@ Changes to the public Media Studio presentation and repository tooling are recor
 
 ### Product presentation
 
+- Embedded rounded transparent corners into README WebP imagery and motion frames; removed the repository-checks badge from the product header.
+
 - Added feature cards captured from the documentation homepage and five animated extension demonstrations with static motion alternatives.
 - Reorganized technical catalogs and PHP examples into expandable sections.
 
