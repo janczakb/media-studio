@@ -494,8 +494,8 @@
     ]
   },
   "logo": {
-    "light": "/art/media-studio.svg",
-    "dark": "/art/media-studio.svg",
+    "light": "/art/media-studio-logo.svg",
+    "dark": "/art/media-studio-logo.svg",
     "href": "/"
   },
   "navbar": {
@@ -628,7 +628,7 @@
       "canonical": "https://studio.bjanczak.com"
     }
   },
-  "favicon": "/art/folder-favicon.svg",
+  "favicon": "/art/favicon-folder.svg",
   "integrations": {
     "gtm": {
       "tagId": "GTM-WNGDV23R"

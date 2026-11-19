@@ -530,7 +530,7 @@ body:has(#fms-landing) #navbar :has(> .nav-tabs) { display:none; }
 body:has(#fms-landing) { background:#000; }
 body:has(#fms-landing) #navbar > div:nth-child(2) { background:#111114; }
 body:has(#fms-landing) #navbar > div:first-child { border-color:#ffffff1a; }
-body:has(#fms-landing) #navbar img.nav-logo[src*="media-studio"] { filter:none; content:url('/art/media-studio-dark.svg'); }
+body:has(#fms-landing) #navbar img.nav-logo[src*="media-studio"] { filter:none; content:url('/art/media-studio-logo-dark.svg'); }
 body:has(#fms-landing) #navbar .fms-product-nav { color:#aaaab0; }
 body:has(#fms-landing) #navbar .fms-product-nav > a:is(:hover,[aria-current]),
 body:has(#fms-landing) #navbar .fms-doc-resources button:hover,
@@ -698,7 +698,7 @@ body:has(#fms-landing) #navbar .fms-mega-icon { color:#9b9db0; }
 @media (prefers-reduced-motion:reduce) {
   .fms-ai-track,.fms-ai-tabs button { transition:none; }
 }
-.fms-landing-footer img[src$='/media-studio.svg'] { content:url('/art/media-studio-dark.svg'); }
+.fms-landing-footer img[src$='/media-studio-logo.svg'] { content:url('/art/media-studio-logo-dark.svg'); }
 .fms-ai-frame img { object-fit:contain; object-position:left bottom; }
 
 /* Spotlight windows retain the application behind the dialog and meet the card edges. */
@@ -1076,7 +1076,7 @@ body:has(#fms-extension-landing) #navbar > div:first-child {
   border-color:#ffffff1a;
 }
 body:has(#fms-extension-landing) #navbar img.nav-logo[src*="media-studio"] {
-  content:url('/art/media-studio-dark.svg');
+  content:url('/art/media-studio-logo-dark.svg');
 }
 body:has(#fms-extension-landing) #navbar .fms-product-nav { color:#aaaab0; }
 body:has(#fms-extension-landing) #navbar .fms-product-nav > a:is(:hover,[aria-current]),
