@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+import os
 import json
 import struct
 import subprocess
@@ -22,10 +23,16 @@ def require(condition: bool, message: str) -> None:
         raise ValueError(message)
 
 
+def git_environment() -> dict[str, str]:
+    # Git hooks export repository/index paths. Never pass them into the isolated
+    # archive fixture, where they would override git -C and touch the caller.
+    return {key: value for key, value in os.environ.items() if not key.startswith("GIT_")}
+
+
 def git(directory: Path, *args: str) -> str:
     result = subprocess.run(
         ["git", "-C", str(directory), *args], check=True,
-        stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, env=git_environment(),
     )
     return result.stdout
 
@@ -154,7 +161,7 @@ def check_workflows() -> None:
 
 def archive_names(directory: Path, destination: Path) -> set[str]:
     with destination.open("wb") as output:
-        subprocess.run(["git", "-C", str(directory), "archive", "--format=tar", "HEAD"], stdout=output, check=True)
+        subprocess.run(["git", "-C", str(directory), "archive", "--format=tar", "HEAD"], stdout=output, check=True, env=git_environment())
     with tarfile.open(destination) as archive:
         return {member.name for member in archive if member.isfile()}
 
