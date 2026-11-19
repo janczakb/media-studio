@@ -160,13 +160,13 @@
 /* Product navigation layered onto the Mintlify header. */
 /* Size the native toolbar before the custom navigation mounts. */
 #navbar div:has(> .topbar-right-container) {
-  display:grid; grid-template-columns:minmax(0,1fr) minmax(390px,auto) minmax(0,1fr);
+  display:grid; grid-template-columns:minmax(0,1fr) minmax(390px,auto) 34px auto;
   column-gap:12px; min-height:56px;
 }
 #navbar div:has(> .topbar-right-container) > :first-child { grid-column:1; grid-row:1; }
 #navbar .fms-product-nav { grid-column:2; grid-row:1; justify-self:center; display:flex; align-items:center; gap:3px; font-size:14px; color:#5b5e69; }
-#navbar .topbar-right-container { grid-column:3; grid-row:1; margin-inline-start:auto; }
-#navbar div:has(> #search-bar-entry) { grid-column:3; grid-row:1; justify-self:end; margin-inline-end:200px; width:34px; z-index:1; }
+#navbar .topbar-right-container { grid-column:4; grid-row:1; margin-inline-start:auto; }
+#navbar div:has(> #search-bar-entry) { grid-column:3; grid-row:1; justify-self:end; width:34px; z-index:1; }
 #navbar #search-bar-entry { width:34px; height:34px; justify-content:center; padding:0; border-radius:8px; }
 #navbar #search-bar-entry > :last-child, #navbar #search-bar-entry svg + div { display:none; }
 #navbar #search-bar-entry svg { flex:none; }
@@ -214,8 +214,8 @@
 #navbar:has(.fms-doc-resources[data-open]) .fms-topbar-row { z-index:25; }
 body:has(#fms-landing) #navbar [aria-label="Navigation tabs"] { display:none; }
 @media (max-width:1023px) {
-  #navbar div:has(> .topbar-right-container) { grid-template-columns:minmax(0,1fr) 105px auto; }
-  #navbar div:has(> .topbar-right-container) > :last-child { grid-column:3; grid-row:1; }
+  #navbar div:has(> .topbar-right-container) { grid-template-columns:minmax(0,1fr) 105px 34px auto; }
+  #navbar div:has(> .topbar-right-container) > :last-child { grid-column:4; grid-row:1; }
   #navbar .fms-product-nav > a { display:none; }
   #navbar .fms-doc-mega, #navbar .fms-doc-resources[data-open] .fms-doc-mega {
     position:fixed; inset:56px 12px auto; width:auto; transform:translateY(-8px) scale(.985);
@@ -1236,3 +1236,33 @@ body:has(#fms-extension-landing) #navbar .fms-doc-mega h2 { color:#a3a3b0; }
   flex-shrink:0;
 }
 #navbar .nav-tabs a[href="/ai"] svg > * { visibility:hidden; }
+
+/* Keep the purchase link and native search as matching icon controls. The
+   visually hidden label remains the link's accessible name without JS. */
+#navbar { --fms-control-bg:rgba(3,7,18,.03); --fms-control-hover:rgba(3,7,18,.1); --fms-control-color:#374151; }
+.dark #navbar,
+body:has(#fms-landing) #navbar,
+body:has(#fms-extension-landing) #navbar {
+  --fms-control-bg:#ffffff17; --fms-control-hover:#ffffff26; --fms-control-color:#c3c3cf;
+}
+#navbar #search-bar-entry,
+#navbar .topbar-right-container a[href^="https://shop.bjanczak.com/checkout/buy/"] {
+  display:flex; align-items:center; justify-content:center; flex:none;
+  width:34px; min-width:34px; height:34px; padding:0; border:0;
+  border-radius:8px; background:var(--fms-control-bg); color:var(--fms-control-color);
+}
+#navbar #search-bar-entry:hover,
+#navbar .topbar-right-container a[href^="https://shop.bjanczak.com/checkout/buy/"]:hover {
+  background:var(--fms-control-hover); color:var(--fms-control-color);
+}
+#navbar .topbar-right-container a[href^="https://shop.bjanczak.com/checkout/buy/"]::before {
+  content:""; display:block; width:18px; height:18px; background:currentColor;
+  mask:url('/art/icons/ShoppingCart01.svg') center / contain no-repeat;
+}
+#navbar .topbar-right-container a[href^="https://shop.bjanczak.com/checkout/buy/"] > span {
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0;
+}
+#navbar .topbar-right-container a[href^="https://shop.bjanczak.com/checkout/buy/"]:focus-visible {
+  outline:2px solid currentColor; outline-offset:3px;
+}
