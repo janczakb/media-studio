@@ -1,1 +1,0 @@
-Synthetic sample documents from https://github.com/p10node/office-engine at 9f743a0870809606d9d5e6c791f8e013285b10b6; MIT, copyright 2026 p10node. Retained unmodified to exercise real format parsers.

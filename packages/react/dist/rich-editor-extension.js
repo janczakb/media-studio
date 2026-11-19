@@ -1,1 +1,0 @@
-function e(){return window.FilamentRichEditor.tiptap.core.Extension.create({name:"studioResponsiveImages",addGlobalAttributes(){return[{types:["image"],attributes:{srcset:{default:null,parseHTML:t=>t.getAttribute("srcset")},sizes:{default:null,parseHTML:t=>t.getAttribute("sizes")}}}]}})}export{e as default};
