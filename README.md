@@ -19,10 +19,10 @@
 
 <p align="center">
   <a href="https://github.com/sponsors/janczakb"><img src="https://img.shields.io/badge/GitHub-Sponsors-EA4AAA?style=flat-square&amp;logo=githubsponsors&amp;logoColor=white" alt="Sponsor Media Studio development"></a>
-  <a href="https://github.com/janczakb/media-studio/stargazers"><img src="https://img.shields.io/github/stars/janczakb/media-studio.svg?style=flat-square&amp;color=EAB308&amp;label=GitHub%20stars" alt="GitHub stars"></a>
+  <a href="https://packagist.org/packages/useflex/media-studio"><img src="https://img.shields.io/packagist/dt/useflex/media-studio?style=flat-square&amp;color=25CDF1&amp;label=Downloads" alt="Total Composer downloads"></a>
   <img src="https://img.shields.io/badge/PHP-8.3%2B-777BB4?style=flat-square" alt="PHP 8.3 or later">
   <img src="https://img.shields.io/badge/Laravel-12%20%7C%2013-FF2D20?style=flat-square" alt="Laravel 12 and 13">
-  <img src="https://img.shields.io/badge/Filament-5%20%C2%B7%20optional-F97316?style=flat-square" alt="Optional Filament 5 integration">
+  <img src="https://img.shields.io/badge/Filament-5-F97316?style=flat-square" alt="Filament 5 integration">
   <img src="https://img.shields.io/badge/hosting-self--hosted-25CDF1?style=flat-square" alt="Self-hosted">
 </p>
 

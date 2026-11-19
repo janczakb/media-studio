@@ -118,7 +118,26 @@ def check_artwork() -> None:
                 require(not name.lower().startswith("on"), f"SVG event handler: {path}")
                 if name == "href":
                     require(value.startswith("#"), f"External SVG reference: {path}")
-    print("PASS: WebP dimensions, banner aspect ratio and static SVG assets")
+    # SVG files are also served through Mintlify's sanitizer. Generic document
+    # IDs can be removed there while href/url references survive.
+    for path in (ROOT / "docs/art").rglob("*.svg"):
+        tree = ET.parse(path)
+        ids = [element.attrib["id"] for element in tree.iter() if "id" in element.attrib]
+        require(len(ids) == len(set(ids)), f"Duplicate SVG IDs: {path}")
+        require(not {"body", "title"}.intersection(ids), f"Sanitizer-sensitive SVG ID: {path}")
+        references = set()
+        for element in tree.iter():
+            require(element.tag.rsplit("}", 1)[-1] != "feDropShadow", f"Use portable SVG shadow primitives: {path}")
+            for key, value in element.attrib.items():
+                if key.rsplit("}", 1)[-1] == "href" and value.startswith("#"):
+                    references.add(value[1:])
+                if key in {"aria-labelledby", "aria-describedby"}:
+                    references.update(value.split())
+                references.update(re.findall(r"url\(\s*['\"]?#([^)'\"\s]+)", value))
+            if element.tag.rsplit("}", 1)[-1] == "style" and element.text:
+                references.update(re.findall(r"url\(\s*['\"]?#([^)'\"\s]+)", element.text))
+        require(not references.difference(ids), f"Unresolved SVG references in {path}: {sorted(references.difference(ids))}")
+    print("PASS: WebP dimensions, banner aspect ratio and SVG reference integrity")
 
 
 def check_workflows() -> None:
