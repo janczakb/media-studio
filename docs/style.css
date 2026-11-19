@@ -158,15 +158,16 @@
 }
 
 /* Product navigation layered onto the Mintlify header. */
-/* Size the native toolbar before the custom navigation mounts. */
+/* Equal outer tracks and matching 34px inner tracks center the navigation
+   independently of the logo and right-side action widths, before JS mounts. */
 #navbar div:has(> .topbar-right-container) {
-  display:grid; grid-template-columns:minmax(0,1fr) minmax(390px,auto) 34px auto;
+  display:grid; grid-template-columns:minmax(0,1fr) 34px auto 34px minmax(0,1fr);
   column-gap:12px; min-height:56px;
 }
 #navbar div:has(> .topbar-right-container) > :first-child { grid-column:1; grid-row:1; }
-#navbar .fms-product-nav { grid-column:2; grid-row:1; justify-self:center; display:flex; align-items:center; gap:3px; font-size:14px; color:#5b5e69; }
-#navbar .topbar-right-container { grid-column:4; grid-row:1; margin-inline-start:auto; }
-#navbar div:has(> #search-bar-entry) { grid-column:3; grid-row:1; justify-self:end; width:34px; z-index:1; }
+#navbar .fms-product-nav { grid-column:3; grid-row:1; justify-self:center; display:flex; align-items:center; gap:3px; font-size:14px; color:#5b5e69; }
+#navbar .topbar-right-container { grid-column:5; grid-row:1; margin-inline-start:auto; }
+#navbar div:has(> #search-bar-entry) { grid-column:4; grid-row:1; justify-self:end; width:34px; z-index:1; }
 #navbar #search-bar-entry { width:34px; height:34px; justify-content:center; padding:0; border-radius:8px; }
 #navbar #search-bar-entry > :last-child, #navbar #search-bar-entry svg + div { display:none; }
 #navbar #search-bar-entry svg { flex:none; }
@@ -213,9 +214,12 @@
 #navbar .fms-mega-icon { min-width:16px; text-align:center; color:#687185; }
 #navbar:has(.fms-doc-resources[data-open]) .fms-topbar-row { z-index:25; }
 body:has(#fms-landing) #navbar [aria-label="Navigation tabs"] { display:none; }
-@media (max-width:1023px) {
+@media (max-width:1199px) {
   #navbar div:has(> .topbar-right-container) { grid-template-columns:minmax(0,1fr) 105px 34px auto; }
   #navbar div:has(> .topbar-right-container) > :last-child { grid-column:4; grid-row:1; }
+  #navbar .fms-product-nav { grid-column:2; }
+  #navbar div:has(> #search-bar-entry) { grid-column:3; }
+  #navbar .topbar-right-container { grid-column:4; }
   #navbar .fms-product-nav > a { display:none; }
   #navbar .fms-doc-mega, #navbar .fms-doc-resources[data-open] .fms-doc-mega {
     position:fixed; inset:56px 12px auto; width:auto; transform:translateY(-8px) scale(.985);
